@@ -51,6 +51,8 @@ if option == "Ozono Agua":
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
     calcule = st.button("Calcular",use_container_width=True)
 
+    st.write(Qc/Vr)
+
 #Parameters Calcule
     
     if calcule == True:
