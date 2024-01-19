@@ -24,13 +24,13 @@ option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), i
 if option == "Ozono Agua":
     col1,col2,col3,col4 = st.columns(4)
     with col1:
-        Rv = st.text_input("Volumen de recipiente (L)")
+        Vr = st.number_input("Volumen del recipiente (L)")
     with col2:
-        st.text("Hello world")
+        Qc = st.number_input("Caudal de consumo (m3/h)")
     with col3:
-        st.text("Hello world")
+        Qr = st.number_input("Caudal de recirculación (m3/h)")
     with col4:
-        st.text("Hello world")
+        C = st.text_input("Concentración objetivo de Ozono Disuelto")
 
 
 
