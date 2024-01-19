@@ -34,7 +34,7 @@ if option == "Ozono Agua":
         st.markdown("<h3 style='text-align: center;'>Factor de seguridad por rendimiento de generación</h3>", unsafe_allow_html=True)
         st.write("0.8")
     with col3:
-         st.markdown("<h3 style='text-align: center;'>Factor de seguridad general de diseño</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center;'>Factor de seguridad general de diseño</h3>", unsafe_allow_html=True)
         st.write("1.5")
 
     st.divider()
