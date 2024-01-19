@@ -59,15 +59,15 @@ if option == "Ozono Agua":
         col8,col9,col10 = st.columns(3)
         with col8:
             st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
-            Tt = Qc/(Vr/1000)
-            st.button(Qc/(Vr/1000),use_container_width=True)
+            Tt = float("{:.2f}".format(Qc/(Vr/1000))
+            st.button(Tt,use_container_width=True)
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
-            Tr = (Vr/1000)/Qr
+            Tr = float("{:.2f}".format((Vr/1000)/Qr)
             st.button(Tr,use_container_width=True)      
         with col10:
             st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
-            Pe = C*Qc
+            Pe = float("{:.2f}".format((C*Qc))
             st.button(Pe,use_container_width=True)
         st.markdown("<h3 style='text-align: center;'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
         Pr = float("{:.2f}".format((1.5*Pe)/(0.8*0.9)))
