@@ -16,8 +16,8 @@ st.set_page_config(
     #page_icon=im,
 )
 
-st.image("https://i.imgur.com/y6j7fR4.jpg")
-st.image("https://i.imgur.com/1FOeg53.png")
+st.image("https://github.com/Jhonnyar07/Ozone-Generators/blob/main/ASEPSIAh.png?raw=true")
+st.image("")
 
 
 
