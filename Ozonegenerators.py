@@ -16,9 +16,9 @@ st.set_page_config(
     #page_icon=im,
 )
 
-
+st.image("https://github.com/Jhonnyar07/Ozone-Generators/blob/main/ozono-eco.jpg?raw=true")
 
 
 st.write("----------------------------------------------------------------------------------------------------")
 
-st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2022 Reserve <br> Rev. 1.03 </p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2024 PID Medioambiental, S.L. <br> Rev. 1.03 </p>", unsafe_allow_html=True)
