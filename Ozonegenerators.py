@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 st.image("https://github.com/Jhonnyar07/Ozone-Generators/blob/main/ASEPSIAh.png?raw=true")
-st.image("")
+#st.image("")
 
 
 
