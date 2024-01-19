@@ -38,7 +38,7 @@ if option == "Ozono Agua":
 
 st.divider()
 
-    st.header("Parámetros de diseño")
+    st.write("Parámetros de diseño")
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
