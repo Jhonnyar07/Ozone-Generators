@@ -24,6 +24,9 @@ option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), i
 
 
 if option == "Ozono Agua":
+
+    st.divider()
+    st.image("https://i.imgur.com/cQ1fWXQ.jpg")
     st.divider()
     st.markdown("<h3 style='text-align: center;'>Factores de seguridad de diseño</h3>", unsafe_allow_html=True)
     col1,col2,col3 = st.columns(3)
