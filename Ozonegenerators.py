@@ -28,13 +28,13 @@ if option == "Ozono Agua":
     st.header("Factores de seguridad de diseño")
     col1,col2,col3 = st.columns(3)
     with col1:
-        st.markdown("<h1 style='text-align: center;'>Factor de seguridad por transferencia de masa</h1>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center;'>Factor de seguridad por transferencia de masa</h3>", unsafe_allow_html=True)
         st.write("0.9")
     with col2:
-        st.write("Factor de seguridad por rendimiento de generación")
+        st.markdown("<h3 style='text-align: center;'>Factor de seguridad por rendimiento de generación</h3>", unsafe_allow_html=True)
         st.write("0.8")
     with col3:
-        st.write("Factor de seguridad general de diseño")
+         st.markdown("<h3 style='text-align: center;'>Factor de seguridad general de diseño</h3>", unsafe_allow_html=True)
         st.write("1.5")
 
     st.divider()
