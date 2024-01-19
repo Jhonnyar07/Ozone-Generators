@@ -60,7 +60,7 @@ if option == "Ozono Agua":
         with col8:
             st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
             Tt = Qc/(Vr/1000)
-            st.markdown("<p style='text-align: center;'>'Tt'</p>", unsafe_allow_html=True)
+            st.write(Tt)  
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
             Tr = (Vr/1000)/Qr
