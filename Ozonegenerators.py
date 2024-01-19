@@ -25,7 +25,7 @@ option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), i
 
 if option == "Ozono Agua":
     st.divider()
-    st.header("Factores de seguridad de diseño")
+    st.markdown("<h3 style='text-align: center;'>Factores de seguridad de diseño</h3>", unsafe_allow_html=True)
     col1,col2,col3 = st.columns(3)
     with col1:
         st.markdown("<p style='text-align: center;'>Factor de seguridad por transferencia de masa</p>", unsafe_allow_html=True)
@@ -39,7 +39,7 @@ if option == "Ozono Agua":
 
     st.divider()
 
-    st.header("Parámetros de diseño")
+    st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
