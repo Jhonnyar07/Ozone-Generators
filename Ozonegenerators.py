@@ -86,7 +86,7 @@ if option == "Ozono Agua":
             <p class="a">{Tt}</p>
             """
             st.markdown(html_str, unsafe_allow_html=True)
-  
+            
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
             Tr = float("{:.2f}".format((Vr/1000)/Qr)
