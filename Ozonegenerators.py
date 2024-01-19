@@ -52,12 +52,17 @@ if option == "Ozono Agua":
     calcule = st.button("Calcular",use_container_width=True)
 
 #Parameters Calcule
-
+    
     if calcule == True:
-        st.write(pd.DataFrame({
-            'Tiempo de tratamiento completo vaso principal (min)':[Qc/Vr],
-            'Tiempo de recirculacion (h)':[Qr/Vr],
-            'Producción mínima esperada (g/h)':[C/Qc],
+        st.divider()
+        st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
+        col8,col9,col10 = st.columns(3)
+        with col8:
+            st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
+            Tt = Qc/Vr
+            st.markdown("<p style='text-align: center;'>Tt</p>", unsafe_allow_html=True)
+        
+
         }))
             
 
