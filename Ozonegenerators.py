@@ -64,14 +64,14 @@ if option == "Ozono Agua":
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
             Tr = float("{:.2f}".format((Vr/1000)/Qr))
-            st.markdown(Tr)    
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tr)), unsafe_allow_html=True) 
         with col10:
             st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
             Pe = float("{:.2f}".format((C*Qc)))
-            st.markdown(Pe)
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pe)), unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center;'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
         Pr = float("{:.2f}".format((1.5*Pe)/(0.8*0.9)))
-        st.markdown(Pr)
+        st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pr)), unsafe_allow_html=True)
         
 
 
