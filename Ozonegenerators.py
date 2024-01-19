@@ -60,7 +60,7 @@ if option == "Ozono Agua":
         with col8:
             st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
             Tt = float("{:.2f}".format(Qc/(Vr/1000))
-            f"<p style='text-align: center;'>{str(Tt)}</p>"
+            f"""<p style='text-align: center;'>{str(Tt)}</p>"""
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
             Tr = float("{:.2f}".format((Vr/1000)/Qr)
