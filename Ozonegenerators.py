@@ -13,7 +13,7 @@ def round_half_up(n, decimals=0):
 #im = chart_with_upwards_trend
 st.set_page_config(
     page_title="Calculo de Generadores de Ozono",
-    page_icon= st.image(https://i.imgur.com/6MPMHVW.jpg)
+    page_icon= st.image("https://i.imgur.com/6MPMHVW.jpg")
 )
 
 st.image("https://i.imgur.com/fhOBqO5.jpg")
