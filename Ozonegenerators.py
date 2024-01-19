@@ -62,8 +62,8 @@ if option == "Ozono Agua":
             Tt = Qc/(Vr/1000)
             st.write(Tt)
         with col9:
-            st.markdown("<p style='text-align: center;'>Tiempo de recirculacion (h)</p>", unsafe_allow_html=True)
-            Tr = Qr/(Vr/1000)
+            st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
+            Tr = (Vr/1000)/Qr
             st.write(Tr)        
         with col10:
             st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
