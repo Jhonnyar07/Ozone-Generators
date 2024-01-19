@@ -44,9 +44,7 @@ if option == "Ozono Agua":
     with col7:
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
     calcule = st.button("Calcular",use_container_width=True)
-    if calcule == True:
-        col8,col9,col10= st.columns(3)
-        with col8:
+
             
 
 
