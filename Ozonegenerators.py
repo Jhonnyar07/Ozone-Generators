@@ -24,9 +24,9 @@ option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), i
 if option == "Ozono Agua":
     col1,col2,col3,col4 = st.columns(4)
     with col1:
-        Vr = st.number_input("Volumen del recipiente (L)")
+        Vr = st.number_input("Volumen del recipiente (Litros)")
     with col2:
-        Qc = st.number_input("Caudal de consumo (m3/h)")
+        Qc = st.number_input("Caudal de consumo en producción (m3/h)")
     with col3:
         Qr = st.number_input("Caudal de recirculación (m3/h)")
     with col4:
