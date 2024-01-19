@@ -21,9 +21,10 @@ st.image("https://i.imgur.com/fhOBqO5.jpg")
 #Selecting the calcule for Ozone gas or water
 option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), index=None)
 
-st.divider()
+
 
 if option == "Ozono Agua":
+    st.divider()
     st.header("Factores de seguridad de diseño")
     col1,col2,col3 = st.columns(3)
     with col1:
@@ -36,9 +37,9 @@ if option == "Ozono Agua":
         st.write("Factor de seguridad general de diseño")
         st.write("1.5")
 
-st.divider()
+    st.divider()
 
-    st.write("Parámetros de diseño")
+    st.header("Parámetros de diseño")
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
