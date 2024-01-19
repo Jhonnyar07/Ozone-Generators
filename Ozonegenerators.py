@@ -51,8 +51,6 @@ if option == "Ozono Agua":
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
     calcule = st.button("Calcular",use_container_width=True)
 
-    st.write(Qc/Vr)
-
 #Parameters Calcule
     
     if calcule == True:
@@ -61,16 +59,16 @@ if option == "Ozono Agua":
         col8,col9,col10 = st.columns(3)
         with col8:
             st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
-            Tt = Qc/Vr
-            st.markdown("<p style='text-align: center;'>Tt</p>", unsafe_allow_html=True)
+            Tt = Qc/(Vr/1000)
+            st.write(Tt)
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion (h)</p>", unsafe_allow_html=True)
-            Tr = Qr/Vr
-            st.markdown("<p style='text-align: center;'>Tr</p>", unsafe_allow_html=True)          
+            Tr = Qr/(Vr/1000)
+            st.write(Tr)        
         with col10:
             st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
             Pe = C/Qc
-            st.markdown("<p style='text-align: center;'>Pe</p>", unsafe_allow_html=True)   
+            st.write(Pe)
         
 
 
