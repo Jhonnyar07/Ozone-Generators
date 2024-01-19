@@ -19,7 +19,7 @@ st.set_page_config(
 st.image("https://imgur.com/a/oDWuiZt")
 
 #Selecting the calcule for Ozone gas or water
-st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), index(none))
+st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), index=None)
 
 st.write("----------------------------------------------------------------------------------------------------")
 
