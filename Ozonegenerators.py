@@ -21,7 +21,8 @@ st.image("https://i.imgur.com/fhOBqO5.jpg")
 #Selecting the calcule for Ozone gas or water
 option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), index=None)
 
-
+if option == "Ozono Agua":
+    st.text("Hello World")
 
 
 
