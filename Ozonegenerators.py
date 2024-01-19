@@ -16,7 +16,7 @@ st.set_page_config(
     #page_icon=im,
 )
 
-st.image("https://github.com/Jhonnyar07/Ozone-Generators/blob/main/ozono-eco.jpg?raw=true")
+st.image("https://imgur.com/a/oDWuiZt")
 
 
 st.write("----------------------------------------------------------------------------------------------------")
