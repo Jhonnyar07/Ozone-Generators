@@ -60,19 +60,19 @@ if option == "Ozono Agua":
         with col8:
             st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
             Tt = Qc/(Vr/1000)
-            st.write(Tt)  
+            st.markdown(Tt)  
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
             Tr = (Vr/1000)/Qr
-            st.write(Tr)        
+            st.markdown(Tr)        
         with col10:
             st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
             Pe = C*Qc
-            st.write(Pe)
+            st.markdown(Pe)
         
 
 
 
 st.write("----------------------------------------------------------------------------------------------------")
 
-st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2024 PID Medioambiental, S.L. <br> Rev. 1.03 </p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2024 PID Medioambiental, S.L. <br> Rev. 1.01 </p>", unsafe_allow_html=True)
