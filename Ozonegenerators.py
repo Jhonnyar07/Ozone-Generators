@@ -51,6 +51,14 @@ if option == "Ozono Agua":
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
     calcule = st.button("Calcular",use_container_width=True)
 
+#Parameters Calcule
+
+    if calcule == True:
+        st.write(pd.DataFrame({
+            'Tiempo de tratamiento completo vaso principal (min)':[Qc/Vr],
+            'Tiempo de recirculacion (h)':[Qr/Vr],
+            'Producción mínima esperada (g/h)':[C/Qc],
+        }))
             
 
 
