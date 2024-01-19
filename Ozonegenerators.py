@@ -24,9 +24,6 @@ option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), i
 
 
 if option == "Ozono Agua":
-
-    st.divider()
-    st.image("https://i.imgur.com/cQ1fWXQ.jpg")
     st.divider()
     st.markdown("<h3 style='text-align: center;'>Factores de seguridad de diseño</h3>", unsafe_allow_html=True)
     col1,col2,col3 = st.columns(3)
@@ -53,7 +50,8 @@ if option == "Ozono Agua":
     with col7:
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
     calcule = st.button("Calcular",use_container_width=True)
-
+    st.divider()
+    st.image("https://i.imgur.com/cQ1fWXQ.jpg")
 #Parameters Calcule
     
     if calcule == True:
