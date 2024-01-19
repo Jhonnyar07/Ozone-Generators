@@ -10,23 +10,6 @@ def round_half_up(n, decimals=0):
     multiplier = 5 ** decimals
     return math.floor(n*multiplier + 0.5) / multiplier
 
-css='''
-[data-testid="metric-container"] {
-    width: fit-content;
-    margin: auto;
-}
-
-[data-testid="metric-container"] > div {
-    width: fit-content;
-    margin: auto;
-}
-
-[data-testid="metric-container"] label {
-    width: fit-content;
-    margin: auto;
-}
-'''
-
 #im = chart_with_upwards_trend
 st.set_page_config(
     page_title="Calculo de Generadores de Ozono",
@@ -77,16 +60,9 @@ if option == "Ozono Agua":
         with col8:
             st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
             Tt = float("{:.2f}".format(Qc/(Vr/1000))
-            html_str = f"""
-            <style>
-            p.a {{
-              font: bold {font_size}px Courier;
-            }}
-            </style>
-            <p class="a">{Tt}</p>
+            f"""
+            <span style='text-align: center;'>{Tt}</span>
             """
-            st.markdown(html_str, unsafe_allow_html=True)
-            
         with col9:
             st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
             Tr = float("{:.2f}".format((Vr/1000)/Qr)
