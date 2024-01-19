@@ -21,11 +21,13 @@ st.image("https://i.imgur.com/fhOBqO5.jpg")
 #Selecting the calcule for Ozone gas or water
 option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), index=None)
 
+st.divider()
+
 if option == "Ozono Agua":
     st.header("Factores de seguridad de diseño")
     col1,col2,col3 = st.columns(3)
     with col1:
-        st.write("Factor de seguridad por transferencia de masa")
+        st.markdown("<h1 style='text-align: center;'>Factor de seguridad por transferencia de masa</h1>", unsafe_allow_html=True)
         st.write("0.9")
     with col2:
         st.write("Factor de seguridad por rendimiento de generación")
@@ -33,7 +35,9 @@ if option == "Ozono Agua":
     with col3:
         st.write("Factor de seguridad general de diseño")
         st.write("1.5")
-        
+
+st.divider()
+
     st.header("Parámetros de diseño")
     col4,col5,col6,col7 = st.columns(4)
     with col4:
