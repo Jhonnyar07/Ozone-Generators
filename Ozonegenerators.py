@@ -31,6 +31,7 @@ if option == "Ozono Agua":
         Qr = st.number_input("Caudal de recirculación (m3/h)", value=None)
     with col4:
         C = st.number_input("Concentración objetivo de Ozono Disuelto", value=None)
+    Calcule = st.button("Calcular")
 
 
 
