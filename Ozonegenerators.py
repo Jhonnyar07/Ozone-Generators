@@ -25,6 +25,12 @@ if option == "Ozono Agua":
     col1,col2,col3,col4 = st.columns(2)
     with col1:
         Rv = st.text_input("Volumen de recipiente (L)")
+    with col2:
+        st.text("Hello world")
+    with col3:
+        st.text("Hello world")
+    with col4:
+        st.text("Hello world")
 
 
 
