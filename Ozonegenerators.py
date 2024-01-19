@@ -67,7 +67,7 @@ if option == "Ozono Agua":
             st.write(Tr)        
         with col10:
             st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
-            Pe = C/Qc
+            Pe = C*Qc
             st.write(Pe)
         
 
