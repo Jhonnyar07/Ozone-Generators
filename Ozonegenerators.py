@@ -71,8 +71,7 @@ if option == "Ozono Agua":
             st.markdown(Pe)
         st.markdown("<h3 style='text-align: center;'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
         Pr = (1.5*Pe)/(0.8*0.9)
-        Prf = st.write(Pr.style.format({"Predictions": "{:.2f}"}))
-        st.markdown(Prf)
+        st.markdown(Pr)
         
 
 
