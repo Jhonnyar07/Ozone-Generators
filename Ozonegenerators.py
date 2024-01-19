@@ -26,11 +26,11 @@ if option == "Ozono Agua":
     with col1:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
     with col2:
-        Qc = st.number_input("Caudal de consumo en producción (m3/h)")
+        Qc = st.number_input("Caudal de consumo en producción (m3/h)", value=None)
     with col3:
-        Qr = st.number_input("Caudal de recirculación (m3/h)")
+        Qr = st.number_input("Caudal de recirculación (m3/h)", value=None)
     with col4:
-        C = st.number_input("Concentración objetivo de Ozono Disuelto")
+        C = st.number_input("Concentración objetivo de Ozono Disuelto", value=None)
 
 
 
