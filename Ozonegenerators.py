@@ -22,7 +22,7 @@ st.image("https://i.imgur.com/fhOBqO5.jpg")
 option=st.selectbox('Tipo de instalación:', ('Ozono Ambiente', 'Ozono Agua'), index=None)
 
 if option == "Ozono Agua":
-    col1,col2,col3,col4 = st.columns(2)
+    col1,col2,col3,col4 = st.columns(4)
     with col1:
         Rv = st.text_input("Volumen de recipiente (L)")
     with col2:
