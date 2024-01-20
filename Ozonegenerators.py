@@ -379,7 +379,7 @@ if option == "Ozono Agua":
                 st.image('https://i.imgur.com/cJRniPE.jpg')
 
             col24,col25 = st.columns(2)
-            with col22:
+            with col24:
                 st.markdown("<h4 style='text-align: center;'>SP-25</h4>", unsafe_allow_html=True)
                 st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha tecnica SP 25.pdf", "rb") as file:
@@ -390,7 +390,7 @@ if option == "Ozono Agua":
                     mime="Doc/pdf",
                     use_container_width=True
                     )        
-            with col23:
+            with col25:
                 st.image('https://i.imgur.com/OI3WF8q.jpg')
 
 st.write("----------------------------------------------------------------------------------------------------")
