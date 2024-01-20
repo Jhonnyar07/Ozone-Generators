@@ -136,7 +136,7 @@ if option == "Ozono Agua":
             mime="Doc/pdf",
             use_container_width=True
           )
-    if Pump =! None:
+    if Pump != None:
         Np = st.number_input("Cantidad de bombas", value=1)
 
     
