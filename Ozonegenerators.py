@@ -56,7 +56,6 @@ if option == "Ozono Agua":
         'Presión Descarga (bar)': [P1]
         })
         D11=st.dataframe(D1, hide_index=True)
-        st.write(D11)
     if Pump == 'CM 10-1':
         Co2= 670
         V2= 2800
