@@ -61,27 +61,33 @@ if option == "Ozono Agua":
         V2= 2800
         Q2= 10
         H2 = 13.67
+        Pt2= 10
         P2 = float("{:.2f}".format((H2*9.8*1000)/100000))
-        st.write(pd.DataFrame({
+        D2=pd.DataFrame({
         'Consumo (Watts)': [Co2],
         'Velocidad (RPM)': [V2],
         'Caudal (m3/h)': [Q2],
         'Altura (m)': [H2],
+        'P. trabajo @-22/55 ºC (Bar)': [Pt2],
         'Presión Descarga (bar)': [P2]
-        }))
+        })
+        st.dataframe(D2, hide_index=True, use_container_width=True)
     if Pump == 'CM 10-2':
         Co3= 1500
         V3= 2910
         Q3= 10
         H3 = 27.09
+        Pt3 = 10
         P3 = float("{:.2f}".format((H3*9.8*1000)/100000))
-        st.write(pd.DataFrame({
+        D3 = pd.DataFrame({
         'Consumo (Watts)': [Co3],
         'Velocidad (RPM)': [V3],
         'Caudal (m3/h)': [Q3],
         'Altura (m)': [H3],
+        'P. trabajo @-22/55 ºC (Bar)': [Pt3],
         'Presión Descarga (bar)': [P3]
-        }))
+        })
+        st.dataframe(D3, hide_index=True, use_container_width=True)
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
