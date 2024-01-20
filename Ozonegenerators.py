@@ -186,7 +186,7 @@ if option == "Ozono Agua":
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad: 5 gr/h <br>Capacidad Nominal: 2.8 gr/h</p>")
+                st.markdown("<p style='text-align: center;'>Capacidad: 5 gr/h <br> Capacidad Nominal: 2.8 gr</p>")
                 with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
                     btn = st.download_button(
                     label="Ficha Técnica",
