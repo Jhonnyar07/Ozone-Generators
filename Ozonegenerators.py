@@ -43,11 +43,11 @@ if option == "Ozono Agua":
     if Pump == 'CM 3-5':
         Q1= 3.1
         H1 = 34.75
-        P1 = H1*9.8*1000
+        P1 = (H1*9.8*1000)/100000
         st.write(pd.DataFrame({
-    'Caudal': [Q1],
-    'Altura': [H1],
-    'Presión Descarga': [P1]
+    'Caudal (m3/h)': [Q1],
+    'Altura (m)': [H1],
+    'Presión Descarga (bar)': [P1]
 }))
     col4,col5,col6,col7 = st.columns(4)
     with col4:
