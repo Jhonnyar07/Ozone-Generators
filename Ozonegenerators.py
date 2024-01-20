@@ -196,7 +196,20 @@ if option == "Ozono Agua":
                     mime="Doc/pdf",
                     use_container_width=True
                     )
-        
+        if Pr>2 and Pr<=4:
+            col11,col12 = st.columns(2)
+            with col11:
+                st.image('https://i.imgur.com/j4Ujngv.jpg')
+            with col12:
+                st.markdown("<h4 style='text-align: center;'>SP-5 20 Oxi</h4>", unsafe_allow_html=True)
+                with open("Ficha Técnica SP5 oxi.pdf", "rb") as file:
+                    btn = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha Técnica SP5 oxi.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
 
 
 
