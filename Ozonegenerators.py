@@ -137,7 +137,7 @@ if option == "Ozono Agua":
             use_container_width=True
           )
     if Pump != None:
-        Np = st.number_input("Cantidad de bombas", value=1)
+        Np = st.number_input("Cantidad de bombas (Solo en paralelo)", value=1)
 
     
     col4,col5,col6,col7 = st.columns(4)
