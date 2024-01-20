@@ -230,20 +230,20 @@ if option == "Ozono Agua":
             with col12:
                 st.image('https://i.imgur.com/j4Ujngv.jpg')
 
-        if Pr>7 and Pr<=:
+        if Pr>7 and Pr<=16:
             col11,col12 = st.columns(2)
             with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-5 30 Oxi</h4>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5 oxi.pdf", "rb") as file:
+                st.markdown("<h4 style='text-align: center;'>SP-21 20 gr</h4>", unsafe_allow_html=True)
+                with open("Ficha Técnica SP21.pdf", "rb") as file:
                     btn = st.download_button(
                     label="Ficha Técnica",
                     data=file,
-                    file_name="Ficha Técnica SP5 oxi.pdf",
+                    file_name="Ficha Técnica SP21.pdf",
                     mime="Doc/pdf",
                     use_container_width=True
                     )        
             with col12:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
+                st.image('https://i.imgur.com/jVRU4mY.jpg')
 
 
 st.write("----------------------------------------------------------------------------------------------------")
