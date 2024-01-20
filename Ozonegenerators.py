@@ -45,12 +45,14 @@ if option == "Ozono Agua":
         V1= 2740
         Q1= 3.1
         H1 = 34.75
+        Pt= 10
         P1 = float("{:.2f}".format((H1*9.8*1000)/100000))
         st.write(pd.DataFrame({
         'Consumo (Watts)': [Co1],
         'Velocidad (RPM)': [V1],
         'Caudal (m3/h)': [Q1],
         'Altura (m)': [H1],
+        'Presion de trabajo @-22/55 ºC (Bar)': [Pt],
         'Presión Descarga (bar)': [P1]
         }))
     if Pump == 'CM 10-1':
