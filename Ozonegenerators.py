@@ -113,10 +113,10 @@ if option == "Ozono Agua":
             use_container_width=True
           )
     if Pump == 'MATRIX/A 5-6T':
-        Co4= 750
+        Co4= 1300
         V4= 2850
-        Q4= 12
-        H4 = 12.8
+        Q4= 2.7
+        H4 = 61.5
         Pt4 = 10
         P4 = float("{:.2f}".format((H4*9.8*1000)/100000))
         D4 = pd.DataFrame({
