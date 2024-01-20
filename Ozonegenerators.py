@@ -52,8 +52,8 @@ if option == "Ozono Agua":
         'Velocidad (RPM)': [V1],
         'Caudal (m3/h)': [Q1],
         'Altura (m)': [H1],
-        'Presion trabajo @-22/55 ºC (Bar)': [Pt1],
-        'Presión Descarga (bar)': [P1]
+        'P. trabajo @-22/55 ºC (Bar)': [Pt1],
+        'P. Descarga (Bar)': [P1]
         })
         st.dataframe(D1, hide_index=True, use_container_width=True)
     if Pump == 'CM 10-1':
