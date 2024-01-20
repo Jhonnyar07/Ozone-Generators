@@ -353,7 +353,7 @@ if option == "Ozono Agua":
                 st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
                 st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn5 = st.download_button(
+                    btn1 = st.download_button(
                     label="Ficha Técnica",
                     data=file,
                     file_name="Ficha Técnica SP 20.pdf",
@@ -368,10 +368,10 @@ if option == "Ozono Agua":
                 st.markdown("<h4 style='text-align: center;'>SP-20 80 gr</h4>", unsafe_allow_html=True)
                 st.markdown("<p style='text-align: center;'>Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn5 = st.download_button(
+                    btn2 = st.download_button(
                     label="Ficha Técnica",
                     data=file,
-                    file_name="Ficha Técnica SP 20.pdf",
+                    file_name="Ficha Técnica SP 2080gr.pdf",
                     mime="Doc/pdf",
                     use_container_width=True
                     )        
