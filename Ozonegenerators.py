@@ -155,8 +155,7 @@ if option == "Ozono Agua":
     with col7:
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
     calcule = st.button("Calcular",use_container_width=True)
-    st.divider()
-    st.image("https://i.imgur.com/cQ1fWXQ.jpg")
+
 #Parameters Calcule
     
     if calcule == True:
@@ -501,6 +500,8 @@ if option == "Ozono Agua":
             with col16:
                 st.image('https://i.imgur.com/6zK69Kq.jpg')
 
+    st.divider()
+    st.image("https://i.imgur.com/cQ1fWXQ.jpg")
 st.write("----------------------------------------------------------------------------------------------------")
 
 st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2024 PID Medioambiental, S.L. <br> J. Aguilar <br> Rev. 1.01 </p>", unsafe_allow_html=True)
