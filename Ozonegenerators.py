@@ -303,6 +303,20 @@ if option == "Ozono Agua":
                     )        
             with col16:
                 st.image('https://i.imgur.com/6zK69Kq.jpg')
+            col17,col18 = st.columns(2)
+            with col17:
+                st.markdown("<h4 style='text-align: center;'>SP-21 40 gr</h4>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
+                with open("Ficha Técnica SP21.pdf", "rb") as file:
+                    btn1 = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha Técnica SP21.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
+            with col18:
+                st.image('https://i.imgur.com/jVRU4mY.jpg')
 
 
 st.write("----------------------------------------------------------------------------------------------------")
