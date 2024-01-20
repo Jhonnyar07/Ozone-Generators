@@ -150,7 +150,7 @@ if option == "Ozono Agua":
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q2)
         elif Pump == 'CM 10-2':
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q3)
-        elif Pump == 'MATRIX':
+        elif Pump == 'MATRIX/A 5-6T':
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q4)
     with col7:
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
