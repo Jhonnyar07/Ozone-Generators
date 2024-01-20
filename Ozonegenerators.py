@@ -186,7 +186,7 @@ if option == "Ozono Agua":
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 5 gr/h <br> Capacidad Nominal: 2.8 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 5 gr/h <br> Capacidad Nominal: 2.8 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -202,7 +202,7 @@ if option == "Ozono Agua":
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-5 20 Oxi</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 20 gr/h <br> Capacidad Nominal: 4.5 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original:  gr/h <br> Capacidad Nominal: 4.5 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP5 oxi.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -218,7 +218,7 @@ if option == "Ozono Agua":
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-5 30 Oxi</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 30 gr/h <br> Capacidad Nominal: 6.4 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 30 gr/h <br> Capacidad Nominal: 6.4 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP5 oxi.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -234,7 +234,7 @@ if option == "Ozono Agua":
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-21 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP21.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -248,7 +248,7 @@ if option == "Ozono Agua":
             col13,col14 = st.columns(2)
             with col13:
                 st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP5.pdf", "rb") as file:
                     btn2 = st.download_button(
                     label="Ficha Técnica",
@@ -264,7 +264,7 @@ if option == "Ozono Agua":
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP5.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -278,7 +278,7 @@ if option == "Ozono Agua":
             col13,col14 = st.columns(2)
             with col13:
                 st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP5.pdf", "rb") as file:
                     btn2 = st.download_button(
                     label="Ficha Técnica",
@@ -293,7 +293,7 @@ if option == "Ozono Agua":
             col20,col21 = st.columns(2)
             with col20:
                 st.markdown("<h4 style='text-align: center;'>SP-18</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP18.pdf", "rb") as file:
                     btn5 = st.download_button(
                     label="Ficha Técnica",
@@ -308,7 +308,7 @@ if option == "Ozono Agua":
             col22,col23 = st.columns(2)
             with col22:
                 st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP 20.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -323,7 +323,7 @@ if option == "Ozono Agua":
             col22,col23 = st.columns(2)
             with col22:
                 st.markdown("<h4 style='text-align: center;'>SP-20 80 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP 20.pdf", "rb") as file:
                     btn2 = st.download_button(
                     label="Ficha Técnica",
@@ -338,7 +338,7 @@ if option == "Ozono Agua":
             col17,col18 = st.columns(2)
             with col17:
                 st.markdown("<h4 style='text-align: center;'>SP-21 40 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP21.pdf", "rb") as file:
                     btn4 = st.download_button(
                     label="Ficha Técnica",
@@ -353,7 +353,7 @@ if option == "Ozono Agua":
             col19,col20 = st.columns(2)
             with col19:
                 st.markdown("<h4 style='text-align: center;'>SP-22</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP22.pdf", "rb") as file:
                     btn5 = st.download_button(
                     label="Ficha Técnica",
@@ -368,7 +368,7 @@ if option == "Ozono Agua":
             col15,col16 = st.columns(2)
             with col15:
                 st.markdown("<h4 style='text-align: center;'>SP-23</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf", "rb") as file:
                     btn3 = st.download_button(
                     label="Ficha Técnica",
@@ -383,7 +383,7 @@ if option == "Ozono Agua":
             col24,col25 = st.columns(2)
             with col24:
                 st.markdown("<h4 style='text-align: center;'>SP-25</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha tecnica SP 25.pdf", "rb") as file:
                     btn2 = st.download_button(
                     label="Ficha Técnica",
@@ -399,7 +399,7 @@ if option == "Ozono Agua":
             col13,col14 = st.columns(2)
             with col13:
                 st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP5.pdf", "rb") as file:
                     btn2 = st.download_button(
                     label="Ficha Técnica",
@@ -414,7 +414,7 @@ if option == "Ozono Agua":
             col20,col21 = st.columns(2)
             with col20:
                 st.markdown("<h4 style='text-align: center;'>SP-18</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP18.pdf", "rb") as file:
                     btn5 = st.download_button(
                     label="Ficha Técnica",
@@ -429,7 +429,7 @@ if option == "Ozono Agua":
             col22,col23 = st.columns(2)
             with col22:
                 st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP 20.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -444,7 +444,7 @@ if option == "Ozono Agua":
             col22,col23 = st.columns(2)
             with col22:
                 st.markdown("<h4 style='text-align: center;'>SP-20 80 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP 20.pdf", "rb") as file:
                     btn2 = st.download_button(
                     label="Ficha Técnica",
@@ -459,7 +459,7 @@ if option == "Ozono Agua":
             col17,col18 = st.columns(2)
             with col17:
                 st.markdown("<h4 style='text-align: center;'>SP-21 40 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP21.pdf", "rb") as file:
                     btn4 = st.download_button(
                     label="Ficha Técnica",
@@ -474,7 +474,7 @@ if option == "Ozono Agua":
             col19,col20 = st.columns(2)
             with col19:
                 st.markdown("<h4 style='text-align: center;'>SP-22</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP22.pdf", "rb") as file:
                     btn5 = st.download_button(
                     label="Ficha Técnica",
@@ -489,7 +489,7 @@ if option == "Ozono Agua":
             col15,col16 = st.columns(2)
             with col15:
                 st.markdown("<h4 style='text-align: center;'>SP-23</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf", "rb") as file:
                     btn3 = st.download_button(
                     label="Ficha Técnica",
