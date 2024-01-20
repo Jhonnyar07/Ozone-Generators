@@ -258,7 +258,7 @@ if option == "Ozono Agua":
                     use_container_width=True
                     )        
             with col14:
-                st.image('https://i.imgur.com/jVRU4mY.jpg')
+                st.image('https://i.imgur.com/j4Ujngv.jpg')
 
 
 st.write("----------------------------------------------------------------------------------------------------")
