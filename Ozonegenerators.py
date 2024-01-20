@@ -181,7 +181,7 @@ if option == "Ozono Agua":
         
         st.divider()
         
-        st.markdown("<h3 style='text-align: center;'>Sistema Recomendado</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
             col11,col12 = st.columns(2)
             with col11:
@@ -230,7 +230,7 @@ if option == "Ozono Agua":
             with col12:
                 st.image('https://i.imgur.com/j4Ujngv.jpg')
 
-        if Pr>7 and Pr<=16:
+        if Pr>7 and Pr<=19:
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-21 20 gr</h4>", unsafe_allow_html=True)
@@ -259,6 +259,50 @@ if option == "Ozono Agua":
                     )        
             with col14:
                 st.image('https://i.imgur.com/j4Ujngv.jpg')
+
+        if Pr>19:
+            col11,col12 = st.columns(2)
+            with col11:
+                st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
+                with open("Ficha Técnica SP5.pdf", "rb") as file:
+                    btn = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha Técnica SP5.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
+            with col12:
+                st.image('https://i.imgur.com/j4Ujngv.jpg')
+            col13,col14 = st.columns(2)
+            with col13:
+                st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
+                with open("Ficha Técnica SP5.pdf", "rb") as file:
+                    btn = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha Técnica SP5.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
+            with col14:
+                st.image('https://i.imgur.com/j4Ujngv.jpg')
+            col15,col16 = st.columns(2)
+            with col15:
+                st.markdown("<h4 style='text-align: center;'>SP-23</h4>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
+                with open("Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf", "rb") as file:
+                    btn = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
+            with col16:
+                st.image('blob:https://imgur.com/cc58cd3b-0af5-4a16-b8a6-85db2a744325')
 
 
 st.write("----------------------------------------------------------------------------------------------------")
