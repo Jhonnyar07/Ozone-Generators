@@ -69,7 +69,7 @@ if option == "Ozono Agua":
         'Caudal (m3/h)': [Q2],
         'Altura (m)': [H2],
         'P. trabajo @-22/55 ºC (Bar)': [Pt2],
-        'Presión Descarga (bar)': [P2]
+        'P. Descarga (bar)': [P2]
         })
         st.dataframe(D2, hide_index=True, use_container_width=True)
     if Pump == 'CM 10-2':
@@ -85,7 +85,7 @@ if option == "Ozono Agua":
         'Caudal (m3/h)': [Q3],
         'Altura (m)': [H3],
         'P. trabajo @-22/55 ºC (Bar)': [Pt3],
-        'Presión Descarga (bar)': [P3]
+        'P. (bar)': [P3]
         })
         st.dataframe(D3, hide_index=True, use_container_width=True)
     col4,col5,col6,col7 = st.columns(4)
