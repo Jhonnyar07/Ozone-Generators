@@ -61,7 +61,8 @@ if option == "Ozono Agua":
             label="Ficha Técnica",
             data=file,
             file_name="96806804_CM_35_ARAEAVBE_CAAN.pdf",
-            mime="Doc/pdf"
+            mime="Doc/pdf",
+            use_container_width=True
           )
     if Pump == 'CM 10-1':
         Co2= 670
@@ -79,6 +80,14 @@ if option == "Ozono Agua":
         'P. Descarga (Bar)': [P2]
         })
         st.dataframe(D2, hide_index=True, use_container_width=True)
+        with open("96806942_CM_101_ARAEAVBE_CAAN.pdf", "rb") as file:
+            btn = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="96806942_CM_101_ARAEAVBE_CAAN.pdf",
+            mime="Doc/pdf",
+            use_container_width=True
+          )
     if Pump == 'CM 10-2':
         Co3= 1500
         V3= 2910
@@ -95,6 +104,14 @@ if option == "Ozono Agua":
         'P. (Bar)': [P3]
         })
         st.dataframe(D3, hide_index=True, use_container_width=True)
+        with open("98771564_CM_102_ARAEAQQE_FAAN.pdf", "rb") as file:
+            btn = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="98771564_CM_102_ARAEAQQE_FAAN.pdf",
+            mime="Doc/pdf",
+            use_container_width=True
+          )
     if Pump == 'MATRIX':
         Co4= 750
         V4= 2850
@@ -111,6 +128,14 @@ if option == "Ozono Agua":
         'P. (Bar)': [P4]
         })
         st.dataframe(D4, hide_index=True, use_container_width=True)
+        with open("MATRIX.pdf", "rb") as file:
+            btn = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="MATRIX.pdf",
+            mime="Doc/pdf",
+            use_container_width=True
+          )
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
