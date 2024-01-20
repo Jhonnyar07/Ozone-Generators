@@ -39,7 +39,7 @@ if option == "Ozono Agua":
     st.divider()
 
     st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
-    Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'Matrix'), index=None)
+    Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'MATRIX'), index=None)
     if Pump == 'CM 3-5':
         Co1= 500
         V1= 2740
@@ -69,7 +69,7 @@ if option == "Ozono Agua":
         'Caudal (m3/h)': [Q2],
         'Altura (m)': [H2],
         'P. trabajo @-22/55 ºC (Bar)': [Pt2],
-        'P. Descarga (bar)': [P2]
+        'P. Descarga (Bar)': [P2]
         })
         st.dataframe(D2, hide_index=True, use_container_width=True)
     if Pump == 'CM 10-2':
@@ -85,9 +85,25 @@ if option == "Ozono Agua":
         'Caudal (m3/h)': [Q3],
         'Altura (m)': [H3],
         'P. trabajo @-22/55 ºC (Bar)': [Pt3],
-        'P. (bar)': [P3]
+        'P. (Bar)': [P3]
         })
         st.dataframe(D3, hide_index=True, use_container_width=True)
+    if Pump == 'MATRIX':
+        Co4= 750
+        V4= 2850
+        Q4= 12
+        H4 = 12.8
+        Pt4 = 10
+        P4 = float("{:.2f}".format((H4*9.8*1000)/100000))
+        D4 = pd.DataFrame({
+        'Consumo (Watts)': [Co4],
+        'Velocidad (RPM)': [V4],
+        'Caudal (m3/h)': [Q4],
+        'Altura (m)': [H4],
+        'P. trabajo @-22/55 ºC (Bar)': [Pt4],
+        'P. (Bar)': [P4]
+        })
+        st.dataframe(D4, hide_index=True, use_container_width=True)
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
