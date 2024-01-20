@@ -47,7 +47,7 @@ if option == "Ozono Agua":
         H1 = 34.75
         P1 = (H1*9.8*1000)/100000
         st.write(pd.DataFrame({
-    'Consumo (Watts)': [Co1]
+    'Consumo (Watts)': [Co1],
     'Velocidad (RPM)': [V1],
     'Caudal (m3/h)': [Q1],
     'Altura (m)': [H1],
