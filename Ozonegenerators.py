@@ -290,7 +290,7 @@ if option == "Ozono Agua":
             with col14:
                 st.image('https://i.imgur.com/j4Ujngv.jpg')
            
-col20,col21 = st.columns(2)
+            col20,col21 = st.columns(2)
             with col20:
                 st.markdown("<h4 style='text-align: center;'>SP-18</h4>", unsafe_allow_html=True)
                 st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
