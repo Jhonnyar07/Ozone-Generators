@@ -136,6 +136,10 @@ if option == "Ozono Agua":
             mime="Doc/pdf",
             use_container_width=True
           )
+    if Pump =! None:
+        Np = st.number_input("Cantidad de bombas", value=1)
+
+    
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
@@ -145,13 +149,13 @@ if option == "Ozono Agua":
         if Pump == None:
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=None)
         elif Pump == 'CM 3-5':
-            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q1)
+            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q1*Np)
         elif Pump == 'CM 10-1':
-            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q2)
+            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q2*Np)
         elif Pump == 'CM 10-2':
-            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q3)
+            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q3*Np)
         elif Pump == 'MATRIX/A 5-6T':
-            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q4)
+            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q4*Np)
     with col7:
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
     calcule = st.button("Calcular",use_container_width=True)
