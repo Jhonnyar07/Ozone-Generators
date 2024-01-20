@@ -52,7 +52,7 @@ if option == "Ozono Agua":
         'Velocidad (RPM)': [V1],
         'Caudal (m3/h)': [Q1],
         'Altura (m)': [H1],
-        'Presion de trabajo @-22/55 ºC (Bar)': [Pt1],
+        'Presion trabajo @-22/55 ºC (Bar)': [Pt1],
         'Presión Descarga (bar)': [P1]
         }))
     if Pump == 'CM 10-1':
