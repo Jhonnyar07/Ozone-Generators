@@ -39,7 +39,7 @@ if option == "Ozono Agua":
     st.divider()
 
     st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
-    Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'MATRIX'), index=None)
+    Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'MATRIX/A 5-6T'), index=None)
     if Pump == 'CM 3-5':
         Co1= 500
         V1= 2740
@@ -112,7 +112,7 @@ if option == "Ozono Agua":
             mime="Doc/pdf",
             use_container_width=True
           )
-    if Pump == 'MATRIX':
+    if Pump == 'MATRIX/A 5-6T':
         Co4= 750
         V4= 2850
         Q4= 12
