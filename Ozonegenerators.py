@@ -445,6 +445,7 @@ if option == "Ozono Agua":
                 st.image('https://i.imgur.com/OI3WF8q.jpg')
 
         if Pr>20:
+            st.markdown("<h4 style='text-align: center;'>NOTA: Para concentraciones mayores a 28 gr/h considere la combinación de 2 o mas sistemas</h4>", unsafe_allow_html=True)
             col13,col14 = st.columns(2)
             with col13:
                 st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
