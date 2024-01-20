@@ -179,6 +179,25 @@ if option == "Ozono Agua":
         Pr = float("{:.2f}".format((1.5*Pe)/(0.8*0.9)))
         st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
         
+        st.divider()
+        
+        st.markdown("<h3 style='text-align: center;'>Sistema Recomendado</h3>", unsafe_allow_html=True)
+        if Pr >0 and <2:
+            col11,col12 = st.columns(2)
+            with col11:
+                st.image('https://i.imgur.com/mcAZEg0.jpg')
+            with col12:
+                st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
+                with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
+                btn = st.download_button(
+                label="Ficha Técnica",
+                data=file,
+                file_name="Ficha tecnica SP 24 v3.pdf",
+                mime="Doc/pdf",
+                use_container_width=True
+                )
+        st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(So)), unsafe_allow_html=True)
+        
 
 
 
