@@ -278,7 +278,7 @@ if option == "Ozono Agua":
             col13,col14 = st.columns(2)
             with col13:
                 st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Capacidad Original: 20 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
                 with open("Ficha Técnica SP5.pdf", "rb") as file:
                     btn2 = st.download_button(
                     label="Ficha Técnica",
@@ -347,6 +347,21 @@ if option == "Ozono Agua":
                     )        
             with col21:
                 st.image('https://i.imgur.com/gpKw594.jpg')
+
+            col22,col23 = st.columns(2)
+            with col20:
+                st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                with open("Ficha Técnica SP 20.pdf", "rb") as file:
+                    btn5 = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha Técnica SP 20.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
+            with col21:
+                st.image('https://i.imgur.com/cJRniPE.jpg')
 
 st.write("----------------------------------------------------------------------------------------------------")
 
