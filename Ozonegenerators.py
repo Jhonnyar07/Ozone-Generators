@@ -40,6 +40,15 @@ if option == "Ozono Agua":
 
     st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
     Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'Matrix'), index=None)
+    if Pump == 'CM 3-5':
+        Q1= 3.1
+        H1 = 34.75
+        P1 = H1*9.8*1000
+        st.write(pd.DataFrame({
+    'Caudal': [Q1],
+    'Altura': [H1],
+    'Presión Descarga': [P1]
+}))
     col4,col5,col6,col7 = st.columns(4)
     with col4:
         Vr = st.number_input("Volumen del recipiente (Litros)", value=None)
