@@ -56,6 +56,13 @@ if option == "Ozono Agua":
         'P. Descarga (Bar)': [P1]
         })
         st.dataframe(D1, hide_index=True, use_container_width=True)
+        with open("96806804_CM_35_ARAEAVBE_CAAN.pdf", "rb") as file:
+            btn = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="96806804_CM_35_ARAEAVBE_CAAN.pdf",
+            mime="Doc/pdf"
+          )
     if Pump == 'CM 10-1':
         Co2= 670
         V2= 2800
