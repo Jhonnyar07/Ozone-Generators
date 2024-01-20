@@ -378,6 +378,21 @@ if option == "Ozono Agua":
             with col23:
                 st.image('https://i.imgur.com/cJRniPE.jpg')
 
+            col24,col25 = st.columns(2)
+            with col22:
+                st.markdown("<h4 style='text-align: center;'>SP-25</h4>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
+                with open("Ficha tecnica SP 25.pdf", "rb") as file:
+                    btn2 = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha tecnica SP 25.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
+            with col23:
+                st.image('https://i.imgur.com/OI3WF8q.jpg')
+
 st.write("----------------------------------------------------------------------------------------------------")
 
 st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2024 PID Medioambiental, S.L. <br> J. Aguilar <br> Rev. 1.01 </p>", unsafe_allow_html=True)
