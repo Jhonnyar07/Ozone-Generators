@@ -182,7 +182,7 @@ if option == "Ozono Agua":
         st.divider()
         
         st.markdown("<h3 style='text-align: center;'>Sistema Recomendado</h3>", unsafe_allow_html=True)
-        if Pr >=0 and <=2:
+        if Pr>=0 and Pr<=2:
             col11,col12 = st.columns(2)
             with col11:
                 st.image('https://i.imgur.com/mcAZEg0.jpg')
