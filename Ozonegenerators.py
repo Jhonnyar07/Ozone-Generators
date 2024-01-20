@@ -504,6 +504,7 @@ if option == "Ozono Agua":
             with col16:
                 st.image('https://i.imgur.com/6zK69Kq.jpg')
 
+    st.markdown("<h3 style='text-align: center;'>Curvas de desinfección del Agua: Concentración vs. Redox>", unsafe_allow_html=True)
     st.divider()
     st.image("https://i.imgur.com/cQ1fWXQ.jpg")
 st.write("----------------------------------------------------------------------------------------------------")
