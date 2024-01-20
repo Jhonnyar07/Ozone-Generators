@@ -101,7 +101,7 @@ if option == "Ozono Agua":
         'Caudal (m3/h)': [Q3],
         'Altura (m)': [H3],
         'P. trabajo @-22/55 ºC (Bar)': [Pt3],
-        'P. (Bar)': [P3]
+        'P. Descarga (Bar)': [P3]
         })
         st.dataframe(D3, hide_index=True, use_container_width=True)
         with open("98771564_CM_102_ARAEAQQE_FAAN.pdf", "rb") as file:
@@ -125,7 +125,7 @@ if option == "Ozono Agua":
         'Caudal (m3/h)': [Q4],
         'Altura (m)': [H4],
         'P. trabajo @-22/55 ºC (Bar)': [Pt4],
-        'P. (Bar)': [P4]
+        'P. Descarga (Bar)': [P4]
         })
         st.dataframe(D4, hide_index=True, use_container_width=True)
         with open("MATRIX.pdf", "rb") as file:
