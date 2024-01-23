@@ -18,10 +18,9 @@ st.set_page_config(
 st.image("https://i.imgur.com/fhOBqO5.jpg")
 
 #Selecting the calcule for Ozone gas or water
-option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Ambiente'), index=None)
+option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Aire'), index=None)
 
-
-
+#OZONE IN WATER CALCULE
 if option == "Ozono Agua":
     st.divider()
     st.markdown("<h3 style='text-align: center;'>Factores de seguridad de diseño</h3>", unsafe_allow_html=True)
@@ -554,6 +553,14 @@ if option == "Ozono Agua":
     st.divider()
     st.markdown("<h3 style='text-align: center;'>Curvas de desinfección del Agua: Concentración vs. Redox", unsafe_allow_html=True)
     st.image("https://i.imgur.com/cQ1fWXQ.jpg")
+
+
+#OZONE IN AIR CALCULE
+if option == "Ozono Aire":
+    st.write("Hello World")
+
+
+
 st.write("----------------------------------------------------------------------------------------------------")
 
 st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2024 PID Medioambiental, S.L. <br> J. Aguilar <br> Rev. 1.01 </p>", unsafe_allow_html=True)
