@@ -175,7 +175,7 @@ if option == "Ozono Agua":
             DBO = st.number_input("DBO (g/m3)", value=0)
             DBOs=1.5
 
-        Cm= float("{:.2f}".format((Fe*Fes+Mn*Mns+DQO*DQOs+DBO*DBOs)*Qr))
+        Cm= float("{:.2f}".format((Fe*Fes+Mn*Mns+DQO*DQOs+DBO*DBOs)*Qc))
     
         st.markdown("<h3 style='text-align: center;'>Factores de diseño</h3>", unsafe_allow_html=True)
         col1,col2,col3,cole = st.columns(4)
