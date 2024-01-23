@@ -570,8 +570,7 @@ if option == "Ozono Aire":
     col1,col2,col3 = st.columns(3)
     with col1:
         st.markdown("<p style='text-align: center;'>Concentración (g/m3)</p>", unsafe_allow_html=True)
-        
-        if Pr == None:
+                if Pr == None:
             Co = 0
         else:
             Co=float("{:.2f}".format((Pr/(Qg*60))*1000))
@@ -581,7 +580,7 @@ if option == "Ozono Aire":
         k = 1.65
         st.markdown("<p style='text-align: center;'>{}</p>".format(str(k)), unsafe_allow_html=True)
     with col3:
-        fi = st.slider("Factor de Intercambio", min_value=0.5, max_value=1.2, value=None)
+        fi = st.slider("Factor de Intercambio", min_value=0.5, max_value=1.2, value=0.8)
         
     calcule = st.button("Calcular",use_container_width=True)
 
