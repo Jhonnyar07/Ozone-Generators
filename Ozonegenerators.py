@@ -169,10 +169,10 @@ if option == "Ozono Agua":
             Mn = st.number_input("Mn (g/m3)", value=0)
             Mns = 0.88
         with col106:
-            DQO = st.number_input("Fe (g/m3)", value=0)
+            DQO = st.number_input("DQO (g/m3)", value=0)
             DQOs=1.5
         with col107:
-            DBO = st.number_input("Fe (g/m3)", value=0)
+            DBO = st.number_input("DBO (g/m3)", value=0)
             DBOs=1.5
 
         #Cm= (Fe*Fes+Mn*Mns+DQO*DQOs+DBO*DBOs)*Qr
