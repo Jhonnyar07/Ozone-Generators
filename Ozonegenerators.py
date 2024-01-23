@@ -578,7 +578,7 @@ if option == "Ozono Aire":
         st.markdown("<p style='text-align: center;'>{}</p>".format(str(k)), unsafe_allow_html=True)
     with col3:
         st.markdown("<p style='text-align: center;'>Factor de Intercambio</p>", unsafe_allow_html=True)
-        fi = st.number_input(value=None)
+        fi = st.number_input("", value=None)
 
     calcule = st.button("Calcular",use_container_width=True)
 
