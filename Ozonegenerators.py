@@ -570,7 +570,7 @@ if option == "Ozono Aire":
     col1,col2,col3 = st.columns(3)
     with col1:
         st.markdown("<p style='text-align: center;'>Concentración (g/m3)</p>", unsafe_allow_html=True)
-                if Pr == None:
+        if Pr == None:
             Co = 0
         else:
             Co=float("{:.2f}".format((Pr/(Qg*60))*1000))
