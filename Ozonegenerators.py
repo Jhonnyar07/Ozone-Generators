@@ -247,7 +247,7 @@ if option == "Ozono Agua":
             st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
             
             st.divider()
-    if calcule == True and optionw != None:
+    if calcule == True and optionw =! None:
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
             col11,col12 = st.columns(2)
