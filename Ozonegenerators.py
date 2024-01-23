@@ -22,7 +22,7 @@ option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Aire'), index=
 
 #OZONE IN WATER CALCULE
 if option == "Ozono Agua":
-    optionw=st.selectbox('Tipo de instalación:', ('Agua Limpia','Aguas Residuales'), index=None)
+    optionw=st.selectbox('Tipo de instalación:', ('Agua Potable','Aguas Residuales'), index=None)
 
     st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
     Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'MATRIX/A 5-6T'), index=None)
@@ -145,7 +145,7 @@ if option == "Ozono Agua":
     with col7:
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
 
-    if optionw == "Agua Limpia":
+    if optionw == "Agua Potable":
         st.divider()
         st.markdown("<h3 style='text-align: center;'>Factores de diseño</h3>", unsafe_allow_html=True)
         col1,col2,col3 = st.columns(3)
@@ -196,7 +196,7 @@ if option == "Ozono Agua":
     calcule = st.button("Calcular",use_container_width=True)
     
     #Parameters Calcule
-    if optionw == 'Agua Limpia' and calcule == True:
+    if optionw == 'Agua Potable' and calcule == True:
         st.divider()
         st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
         col8,col9,col10 = st.columns(3)
