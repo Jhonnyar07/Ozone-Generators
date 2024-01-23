@@ -22,20 +22,7 @@ option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Aire'), index=
 
 #OZONE IN WATER CALCULE
 if option == "Ozono Agua":
-    st.divider()
-    st.markdown("<h3 style='text-align: center;'>Factores de seguridad de diseño</h3>", unsafe_allow_html=True)
-    col1,col2,col3 = st.columns(3)
-    with col1:
-        st.markdown("<p style='text-align: center;'>Factor de seguridad por transferencia de masa</p>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>0.9</p>", unsafe_allow_html=True)
-    with col2:
-        st.markdown("<p style='text-align: center;'>Factor de seguridad por rendimiento de generación</p>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>0.8</p>", unsafe_allow_html=True)
-    with col3:
-        st.markdown("<p style='text-align: center;'>Factor de seguridad general de diseño</p>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>1.5</p>", unsafe_allow_html=True)
-
-    st.divider()
+    optionw=st.selectbox('Tipo de instalación:', ('Agua Limpia','Aguas Residuales'), index=None)
 
     st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
     Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'MATRIX/A 5-6T'), index=None)
@@ -157,6 +144,56 @@ if option == "Ozono Agua":
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q4*Np)
     with col7:
         C = st.number_input("Concentración objetivo de Ozono Disuelto (PPM)", value=None)
+
+    if optionw == "Agua Limpia":
+        st.divider()
+        st.markdown("<h3 style='text-align: center;'>Factores de diseño</h3>", unsafe_allow_html=True)
+        col1,col2,col3 = st.columns(3)
+        with col1:
+            st.markdown("<p style='text-align: center;'>Factor de seguridad por transferencia de masa</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>0.9</p>", unsafe_allow_html=True)
+        with col2:
+            st.markdown("<p style='text-align: center;'>Factor de seguridad por rendimiento de generación</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>0.8</p>", unsafe_allow_html=True)
+        with col3:
+            st.markdown("<p style='text-align: center;'>Factor de seguridad general de diseño</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>1.5</p>", unsafe_allow_html=True)
+    if optionw == "Aguas Residuales":
+        st.divider()
+        st.markdown("<h3 style='text-align: center;'>Contaminantes</h3>", unsafe_allow_html=True)
+        cola,colb,colc,cold: st.comlumns(4)
+        with cola:
+            Fe = st.number_input("Fe (g/m3)", value=0)
+            Fes = 0.44
+        with colb:
+            Mn = st.number_input("Mn (g/m3)", value=0)
+            Mns = 0.88
+        with colc:
+            DQO = st.number_input("Fe (g/m3)", value=0)
+            DQOs=1.5
+        with cold:
+            DBO = st.number_input("Fe (g/m3)", value=0)
+            DBOs=1.5
+
+        Cm= (Fe*Fes+Mn*Mns+DQO*DQOs+DBO*DBOs)*Qr
+    
+        st.markdown("<h3 style='text-align: center;'>Factores de diseño</h3>", unsafe_allow_html=True)
+        col1,col2,col3,cole = st.columns(4)
+        with col1:
+            st.markdown("<p style='text-align: center;'>Factor de seguridad por transferencia de masa</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>0.9</p>", unsafe_allow_html=True)
+        with col2:
+            st.markdown("<p style='text-align: center;'>Factor de seguridad por rendimiento de generación</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>0.8</p>", unsafe_allow_html=True)
+        with col3:
+            st.markdown("<p style='text-align: center;'>Factor de seguridad general de diseño</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>1.5</p>", unsafe_allow_html=True)
+        with cole:
+            st.markdown("<p style='text-align: center;'>Contaminantes</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Cm)), unsafe_allow_html=True)            
+    
+    st.divider()
+    
     calcule = st.button("Calcular",use_container_width=True)
 
 #Parameters Calcule
