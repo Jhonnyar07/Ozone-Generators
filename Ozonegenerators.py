@@ -189,7 +189,7 @@ if option == "Ozono Agua":
             st.markdown("<p style='text-align: center;'>Factor de seguridad general de diseño</p>", unsafe_allow_html=True)
             st.markdown("<p style='text-align: center;'>1.5</p>", unsafe_allow_html=True)
         with cole:
-            st.markdown("<p style='text-align: center;'>Contaminantes</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Elementos Contaminantes (gr/h)</p>", unsafe_allow_html=True)
             st.markdown("<p style='text-align: center;'>{}</p>".format(str(Cm)), unsafe_allow_html=True)            
     
     st.divider()
