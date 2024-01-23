@@ -164,16 +164,16 @@ if option == "Ozono Agua":
         st.markdown("<h3 style='text-align: center;'>Contaminantes</h3>", unsafe_allow_html=True)
         col104,col105,col106,col107 = st.columns(4)
         with col104:
-            Fe = st.number_input("Fe (g/m3)", value=0)
+            Fe = st.number_input("Fe (g/m3)", value=0.00)
             Fes = 0.44
         with col105:
-            Mn = st.number_input("Mn (g/m3)", value=0)
+            Mn = st.number_input("Mn (g/m3)", value=0.00)
             Mns = 0.88
         with col106:
-            DQO = st.number_input("DQO (g/m3)", value=0)
+            DQO = st.number_input("DQO (g/m3)", value=0.00)
             DQOs=1.5
         with col107:
-            DBO = st.number_input("DBO (g/m3)", value=0)
+            DBO = st.number_input("DBO (g/m3)", value=0.00)
             DBOs=1.5
 
         Cm= float("{:.2f}".format((Fe*Fes+Mn*Mns+DQO*DQOs+DBO*DBOs)*Qc))
