@@ -566,7 +566,7 @@ if option == "Ozono Aire":
     with col19:
         Pr = st.number_input("Producción seleccionada (g/h)", value=None)
     
-    st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
+
     col1,col2,col3 = st.columns(3)
     with col1:
         st.markdown("<p style='text-align: center;'>Concentración (g/m3)</p>", unsafe_allow_html=True)
@@ -581,6 +581,7 @@ if option == "Ozono Aire":
         
 
     calcule = st.button("Calcular",use_container_width=True)
+        st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
 
 st.write("----------------------------------------------------------------------------------------------------")
 
