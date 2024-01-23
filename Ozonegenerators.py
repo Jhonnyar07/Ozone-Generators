@@ -580,8 +580,10 @@ if option == "Ozono Aire":
         fi = st.slider("Factor de Intercambio", min_value=0.5, max_value=1.2, value=None)
         
     calcule = st.button("Calcular",use_container_width=True)
-        
-    st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
+
+    if calcule == True:
+        st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
+    
 
 st.write("----------------------------------------------------------------------------------------------------")
 
