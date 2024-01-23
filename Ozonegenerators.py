@@ -586,6 +586,10 @@ if option == "Ozono Aire":
 
     if calcule == True:
         st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
+        #Variables of air ozone
+        c0=0
+        c1=(c0+0.1*(-k*c0+(Qg/Ve)*(Co-c0)-fi*(Qg/Ve)*c0)
+        st.write(c1)
     
 
 st.write("----------------------------------------------------------------------------------------------------")
