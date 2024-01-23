@@ -565,9 +565,7 @@ if option == "Ozono Aire":
         Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
     with col19:
         Pr = st.number_input("Producción seleccionada (g/h)", value=None)
-    calcule = st.button("Calcular",use_container_width=True)
     
-    st.divider()
     st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
     col1,col2,col3 = st.columns(3)
     with col1:
@@ -575,13 +573,14 @@ if option == "Ozono Aire":
         Co=float("{:.2f}".format((Pr/(Qg*60))*1000))
         st.markdown("<p style='text-align: center;'>{}</p>".format(str(Co)), unsafe_allow_html=True)
     with col2:
-        st.markdown("<p style='text-align: center;'>Factor de seguridad por rendimiento de generación</p>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>0.8</p>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center;'>Constante K</p>", unsafe_allow_html=True)
+        k = 1.65
+        st.markdown("<p style='text-align: center;'>{}</p>".format(str(k)), unsafe_allow_html=True)
     with col3:
-        st.markdown("<p style='text-align: center;'>Factor de seguridad general de diseño</p>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>1.5</p>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center;'>Factor de Intercambio</p>", unsafe_allow_html=True)
+        fi = st.number_input(value=None)
 
-
+    calcule = st.button("Calcular",use_container_width=True)
 
 st.write("----------------------------------------------------------------------------------------------------")
 
