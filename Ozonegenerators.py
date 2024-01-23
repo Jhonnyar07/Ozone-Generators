@@ -557,7 +557,15 @@ if option == "Ozono Agua":
 
 #OZONE IN AIR CALCULE
 if option == "Ozono Aire":
-    st.write("Hello World")
+    col17,col18,col19 = st.columns(3)
+    with col17:
+        Vr = st.number_input("Volumen del espacio a tratar (L)", value=None)
+    with col18:
+        Qc = st.number_input("Caudal de salida del gas (L/min)", value=None)
+    with col19:
+        C = st.number_input("Producción seleccionada (g/h)", value=None)
+    calcule = st.button("Calcular",use_container_width=True)
+
 
 
 
