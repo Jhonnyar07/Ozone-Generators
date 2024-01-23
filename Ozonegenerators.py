@@ -161,18 +161,17 @@ if option == "Ozono Agua":
     if optionw == "Aguas Residuales":
         st.divider()
         st.markdown("<h3 style='text-align: center;'>Contaminantes</h3>", unsafe_allow_html=True)
-        
-        col100,col101,col102,col103 = st.comlumns(4)
-        with col100:
+        col104,col105,col106,col107 = st.columns(4)
+        with col104:
             Fe = st.number_input("Fe (g/m3)", value=0)
             Fes = 0.44
-        with col101:
+        with col105:
             Mn = st.number_input("Mn (g/m3)", value=0)
             Mns = 0.88
-        with col102:
+        with col106:
             DQO = st.number_input("Fe (g/m3)", value=0)
             DQOs=1.5
-        with col103:
+        with col107:
             DBO = st.number_input("Fe (g/m3)", value=0)
             DBOs=1.5
 
