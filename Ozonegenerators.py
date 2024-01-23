@@ -666,7 +666,7 @@ if option == "Ozono Aire":
         'Concentración O3 (PPM)': [ppm0,ppm1,ppm2,ppm3,ppm4,ppm5,ppm6,ppm7,ppm8,ppm9,ppm10,ppm12,ppm13,ppm14,ppm15,ppm16,ppm17,ppm18,ppm19,ppm20,ppm21,ppm22,ppm23,ppm24,ppm25,ppm26,ppm27,ppm28,ppm29,ppm30,ppm31,ppm32,ppm33,ppm34,ppm35]
         })
         st.dataframe(D3.style.format("{:.10}"), hide_index=True, use_container_width=True, height=1260)
-        st.line_chart(D3)
+        st.line_chart(D3, x="Tiempo (min)", y="Concentración O3 (PPM)")
 
 st.write("----------------------------------------------------------------------------------------------------")
 
