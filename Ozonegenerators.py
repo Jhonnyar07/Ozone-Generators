@@ -158,35 +158,7 @@ if option == "Ozono Agua":
         with col3:
             st.markdown("<p style='text-align: center;'>Factor de seguridad general de diseño</p>", unsafe_allow_html=True)
             st.markdown("<p style='text-align: center;'>1.5</p>", unsafe_allow_html=True)
-
-        st.divider()
-    
-        calcule = st.button("Calcular",use_container_width=True)
-    
-    #Parameters Calcule
-        
-        if calcule == True:
-            st.divider()
-            st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
-            col8,col9,col10 = st.columns(3)
-            with col8:
-                st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
-                Tt = float("{:.2f}".format(Qc/(Vr/1000)))
-                st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tt)), unsafe_allow_html=True)
-            with col9:
-                st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
-                Tr = float("{:.2f}".format((Vr/1000)/Qr))
-                st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tr)), unsafe_allow_html=True) 
-            with col10:
-                st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
-                Pe = float("{:.2f}".format((C*Qc)))
-                st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pe)), unsafe_allow_html=True)
-            st.markdown("<h3 style='text-align: center; color:green'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
-            Pr = float("{:.2f}".format((1.5*Pe)/(0.8*0.9)))
-            st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
-            
-            st.divider()
-    
+      
     if optionw == "Aguas Residuales":
         st.divider()
         st.markdown("<h3 style='text-align: center;'>Contaminantes</h3>", unsafe_allow_html=True)
@@ -221,33 +193,51 @@ if option == "Ozono Agua":
             st.markdown("<p style='text-align: center;'>Elementos Contaminantes (gr/h)</p>", unsafe_allow_html=True)
             st.markdown("<p style='text-align: center;'>{}</p>".format(str(Cm)), unsafe_allow_html=True)            
 
-        st.divider()
-        calcule = st.button("Calcular",use_container_width=True)
+    calcule = st.button("Calcular",use_container_width=True)
     
     #Parameters Calcule
-        
-        if calcule == True:
-            st.divider()
-            st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
-            col8,col9,col10 = st.columns(3)
-            with col8:
-                st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
-                Tt = float("{:.2f}".format(Qc/(Vr/1000)))
-                st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tt)), unsafe_allow_html=True)
-            with col9:
-                st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
-                Tr = float("{:.2f}".format((Vr/1000)/Qr))
-                st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tr)), unsafe_allow_html=True) 
-            with col10:
-                st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
-                Pe = float("{:.2f}".format((C*Qc)))
-                st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pe)), unsafe_allow_html=True)
-            st.markdown("<h3 style='text-align: center; color:green'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
-            Pr = float("{:.2f}".format(((1.5*Pe)/(0.8*0.9))+Cm))
-            st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
-            
-            st.divider()
-    if calcule == True and optionw != None:
+    if optionw == 'Agua Limpia' and calcule == True:
+        st.divider()
+        st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
+        col8,col9,col10 = st.columns(3)
+        with col8:
+            st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
+            Tt = float("{:.2f}".format(Qc/(Vr/1000)))
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tt)), unsafe_allow_html=True)
+        with col9:
+            st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
+            Tr = float("{:.2f}".format((Vr/1000)/Qr))
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tr)), unsafe_allow_html=True) 
+        with col10:
+            st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
+            Pe = float("{:.2f}".format((C*Qc)))
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pe)), unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color:green'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
+        Pr = float("{:.2f}".format((1.5*Pe)/(0.8*0.9)))
+        st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
+                st.divider()
+    elif optionw == 'Aguas Residuales' and calcule == True:
+        st.divider()
+        st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
+        col8,col9,col10 = st.columns(3)
+        with col8:
+            st.markdown("<p style='text-align: center;'>Tiempo de tratamiento completo vaso principal (min)</p>", unsafe_allow_html=True)
+            Tt = float("{:.2f}".format(Qc/(Vr/1000)))
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tt)), unsafe_allow_html=True)
+        with col9:
+            st.markdown("<p style='text-align: center;'>Tiempo de recirculacion en tanque (h)</p>", unsafe_allow_html=True)
+            Tr = float("{:.2f}".format((Vr/1000)/Qr))
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Tr)), unsafe_allow_html=True) 
+        with col10:
+            st.markdown("<p style='text-align: center;'>Producción mínima esperada (g/h)</p>", unsafe_allow_html=True)
+            Pe = float("{:.2f}".format((C*Qc)))
+            st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pe)), unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color:green'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
+        Pr = float("{:.2f}".format(((1.5*Pe)/(0.8*0.9))+Cm))
+        st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
+        st.divider()
+    
+    if calcule == True:
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
             col11,col12 = st.columns(2)
