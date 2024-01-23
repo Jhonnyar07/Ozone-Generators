@@ -573,7 +573,7 @@ if option == "Ozono Aire":
     with col1:
         st.markdown("<p style='text-align: center;'>Concentración</p>", unsafe_allow_html=True)
         C0=Pr/Qg
-        st.markdown("<p style='text-align: center;'>{C0}</p>".format(Str(C0)), unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center;'>{C0}</p>".format(str(C0)), unsafe_allow_html=True)
     with col2:
         st.markdown("<p style='text-align: center;'>Factor de seguridad por rendimiento de generación</p>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center;'>0.8</p>", unsafe_allow_html=True)
