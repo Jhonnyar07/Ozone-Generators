@@ -215,7 +215,7 @@ if option == "Ozono Agua":
         st.markdown("<h3 style='text-align: center; color:green'>Producción requerida (g/h)</3>", unsafe_allow_html=True)
         Pr = float("{:.2f}".format((1.5*Pe)/(0.8*0.9)))
         st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
-                st.divider()
+        st.divider()
     elif optionw == 'Aguas Residuales' and calcule == True:
         st.divider()
         st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
