@@ -15,7 +15,7 @@ st.set_page_config(
     page_title="Calculo de Generadores de Ozono"
 )
 
-st.image("https://i.imgur.com/fhOBqO5.jpg")
+st.image("https://i.imgur.com/NwOV7Ob.jpg")
 
 #Selecting the calcule for Ozone gas or water
 option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Aire'), index=None)
