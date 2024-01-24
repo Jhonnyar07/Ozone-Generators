@@ -237,21 +237,21 @@ if option == "Ozono Agua":
         st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
         st.divider()
     
-def sp24():
-    col11,col12 = st.columns(2)
-    with col11:
-        st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 5 gr/h <br> Capacidad Nominal: 2.8 gr/h </p>", unsafe_allow_html=True)
-        with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
-            btn1 = st.download_button(
-            label="Ficha Técnica",
-            data=file,
-            file_name="Ficha tecnica SP 24 v3.pdf",
-            mime="Doc/pdf",
-            use_container_width=True
-            )
-    with col12:
-        st.image('https://i.imgur.com/mcAZEg0.jpg')
+    def sp24():
+        col11,col12 = st.columns(2)
+        with col11:
+            st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 5 gr/h <br> Capacidad Nominal: 2.8 gr/h </p>", unsafe_allow_html=True)
+            with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
+                btn1 = st.download_button(
+                label="Ficha Técnica",
+                data=file,
+                file_name="Ficha tecnica SP 24 v3.pdf",
+                mime="Doc/pdf",
+                use_container_width=True
+                )
+        with col12:
+            st.image('https://i.imgur.com/mcAZEg0.jpg')
 
 
 
