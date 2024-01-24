@@ -237,9 +237,9 @@ if option == "Ozono Agua":
         st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
         st.divider()
     
-    def sp520():
-    def sp545():
-    def sp560():
+    #def sp520():
+    #def sp545():
+    #def sp560():
     def sp24():
         col11,col12 = st.columns(2)
         with col11:
