@@ -249,7 +249,7 @@ if option == "Ozono Agua":
             })
             st.dataframe(DSP520, hide_index=True, use_container_width=True)
             with open("Ficha Técnica SP5.pdf", "rb") as file:
-                btn2 = st.download_button(
+                btn1 = st.download_button(
                 label="Ficha Técnica",
                 data=file,
                 file_name="Ficha Técnica SP5.pdf",
@@ -293,7 +293,7 @@ if option == "Ozono Agua":
             })
             st.dataframe(DSP560, hide_index=True, use_container_width=True)
             with open("Ficha Técnica SP5.pdf", "rb") as file:
-                btn2 = st.download_button(
+                btn3 = st.download_button(
                 label="Ficha Técnica",
                 data=file,
                 file_name="Ficha Técnica SP560g.pdf",
@@ -315,7 +315,7 @@ if option == "Ozono Agua":
             })
             st.dataframe(DSP18, hide_index=True, use_container_width=True)
             with open("Ficha Técnica SP18.pdf", "rb") as file:
-                    btn5 = st.download_button(
+                    btn4 = st.download_button(
                     label="Ficha Técnica",
                     data=file,
                     file_name="Ficha Técnica SP18.pdf",
@@ -337,7 +337,7 @@ if option == "Ozono Agua":
             })
             st.dataframe(DSP520, hide_index=True, use_container_width=True)
             with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
-                    btn1 = st.download_button(
+                    btn5 = st.download_button(
                     label="Ficha Técnica",
                     data=file,
                     file_name="Ficha tecnica SP 24 v3.pdf",
