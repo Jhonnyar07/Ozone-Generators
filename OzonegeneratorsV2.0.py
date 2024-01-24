@@ -269,15 +269,15 @@ if option == "Ozono Agua":
             'Conc. O3 (gr/m3)': [70,71,72,70,67,60,59,56,52],
             'Prod. O3 (g/h)': [4.2,8.52,12.96,16.8,20.1,21.6,24.78,26.88,28.08]
             })
-        st.dataframe(DSP545, hide_index=True, use_container_width=True)
-        with open("Ficha Técnica SP5.pdf", "rb") as file:
-            btn2 = st.download_button(
-            label="Ficha Técnica",
-            data=file,
-            file_name="Ficha Técnica SP560g.pdf",
-            mime="Doc/pdf",
-            use_container_width=True
-            )        
+            st.dataframe(DSP545, hide_index=True, use_container_width=True)
+            with open("Ficha Técnica SP5.pdf", "rb") as file:
+                btn2 = st.download_button(
+                label="Ficha Técnica",
+                data=file,
+                file_name="Ficha Técnica SP560g.pdf",
+                mime="Doc/pdf",
+                use_container_width=True
+                )        
         with col14:
             st.image('https://i.imgur.com/j4Ujngv.jpg')
     
@@ -291,15 +291,15 @@ if option == "Ozono Agua":
             'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
             'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
             })
-        st.dataframe(DSP560, hide_index=True, use_container_width=True)
-        with open("Ficha Técnica SP5.pdf", "rb") as file:
-            btn2 = st.download_button(
-            label="Ficha Técnica",
-            data=file,
-            file_name="Ficha Técnica SP560g.pdf",
-            mime="Doc/pdf",
-            use_container_width=True
-            )        
+            st.dataframe(DSP560, hide_index=True, use_container_width=True)
+            with open("Ficha Técnica SP5.pdf", "rb") as file:
+                btn2 = st.download_button(
+                label="Ficha Técnica",
+                data=file,
+                file_name="Ficha Técnica SP560g.pdf",
+                mime="Doc/pdf",
+                use_container_width=True
+                )        
         with col14:
             st.image('https://i.imgur.com/j4Ujngv.jpg')
             
@@ -313,15 +313,15 @@ if option == "Ozono Agua":
             'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
             'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
             })
-        st.dataframe(DSP18, hide_index=True, use_container_width=True)
-        with open("Ficha Técnica SP18.pdf", "rb") as file:
-                btn5 = st.download_button(
-                label="Ficha Técnica",
-                data=file,
-                file_name="Ficha Técnica SP18.pdf",
-                mime="Doc/pdf",
-                use_container_width=True
-                )        
+            st.dataframe(DSP18, hide_index=True, use_container_width=True)
+            with open("Ficha Técnica SP18.pdf", "rb") as file:
+                    btn5 = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha Técnica SP18.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )        
         with col21:
             st.image('https://i.imgur.com/gpKw594.jpg')
 
@@ -335,15 +335,15 @@ if option == "Ozono Agua":
             'Conc. O3 (gr/m3)': [42.8],
             'Prod. O3 (g/h)': [2.58]
             })
-        st.dataframe(DSP520, hide_index=True, use_container_width=True)
-        with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
-                btn1 = st.download_button(
-                label="Ficha Técnica",
-                data=file,
-                file_name="Ficha tecnica SP 24 v3.pdf",
-                mime="Doc/pdf",
-                use_container_width=True
-                )
+            st.dataframe(DSP520, hide_index=True, use_container_width=True)
+            with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
+                    btn1 = st.download_button(
+                    label="Ficha Técnica",
+                    data=file,
+                    file_name="Ficha tecnica SP 24 v3.pdf",
+                    mime="Doc/pdf",
+                    use_container_width=True
+                    )
         with col12:
             st.image('https://i.imgur.com/mcAZEg0.jpg')
 
