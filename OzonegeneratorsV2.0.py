@@ -474,12 +474,14 @@ if option == "Ozono Agua":
 #OZONE IN AIR CALCULE
     
 if option == "Ozono Aire":
-    def spal(name,prod):
-        name + ' - Prod. Nominal: ' + prod + ' gr/h'
-    
-    #spal('Z1250T','0.017')
 
-    st.selectbox('Seleccione un equipo:', (str(spal('Z1250T','0.017'))), index=None)
+    st.selectbox('Seleccione un equipo:',(
+        'Z1250T - Prod. Nominal: 17 mg/h',
+        'Z3000T - Prod. Nominal: 34 mg/h',
+        'Z6000T - Prod. Nominal: 75 mg/h',
+        'Z10000T - Prod. Nominal: 95 mg/h',
+        'Z20000T - Prod. Nominal: 120 mg/h',
+    ), index=None)
 
     st.divider()
     col17,col18,col19 = st.columns(3)
