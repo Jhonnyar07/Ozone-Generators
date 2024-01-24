@@ -237,9 +237,94 @@ if option == "Ozono Agua":
         st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
         st.divider()
     
-    #def sp520():
-    #def sp545():
-    #def sp560():
+    def sp520():
+        col13,col14 = st.columns(2)
+        with col13:
+            st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 1 Celda de 15 Gr</p>", unsafe_allow_html=True)
+            DSP520 = pd.DataFrame({
+            'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
+            'Conc. O3 (gr/m3)': [75,69,67,62,58,48,43,40,37],
+            'Prod. O3 (g/h)': [4.5,8.28,12.06,14.88,17.4,17.28,18.06,19.2,19.98]
+            })
+            st.dataframe(DSP520, hide_index=True, use_container_width=True)
+            with open("Ficha Técnica SP5.pdf", "rb") as file:
+                btn2 = st.download_button(
+                label="Ficha Técnica",
+                data=file,
+                file_name="Ficha Técnica SP5.pdf",
+                mime="Doc/pdf",
+                use_container_width=True
+                )        
+        with col14:
+            st.image('https://i.imgur.com/j4Ujngv.jpg')
+
+    def sp545():
+        col13,col14 = st.columns(2)
+        with col13:
+            st.markdown("<h4 style='text-align: center;'>SP-5 45 gr</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 2 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            DSP545 = pd.DataFrame({
+            'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
+            'Conc. O3 (gr/m3)': [70,71,72,70,67,60,59,56,52],
+            'Prod. O3 (g/h)': [4.2,8.52,12.96,16.8,20.1,21.6,24.78,26.88,28.08]
+            })
+        st.dataframe(DSP545, hide_index=True, use_container_width=True)
+        with open("Ficha Técnica SP5.pdf", "rb") as file:
+            btn2 = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="Ficha Técnica SP560g.pdf",
+            mime="Doc/pdf",
+            use_container_width=True
+            )        
+        with col14:
+            st.image('https://i.imgur.com/j4Ujngv.jpg')
+    
+    def sp560():
+        col13,col14 = st.columns(2)
+        with col13:
+            st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            DSP560 = pd.DataFrame({
+            'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
+            'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
+            'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
+            })
+        st.dataframe(DSP560, hide_index=True, use_container_width=True)
+        with open("Ficha Técnica SP5.pdf", "rb") as file:
+            btn2 = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="Ficha Técnica SP560g.pdf",
+            mime="Doc/pdf",
+            use_container_width=True
+            )        
+        with col14:
+            st.image('https://i.imgur.com/j4Ujngv.jpg')
+            
+    def sp18():
+        col20,col21 = st.columns(2)
+        with col20:
+            st.markdown("<h4 style='text-align: center;'>SP-18 60 gr</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            DSP18 = pd.DataFrame({
+            'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
+            'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
+            'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
+            })
+            st.dataframe(DSP18, hide_index=True, use_container_width=True)
+            with open("Ficha Técnica SP18.pdf", "rb") as file:
+                btn5 = st.download_button(
+                label="Ficha Técnica",
+                data=file,
+                file_name="Ficha Técnica SP18.pdf",
+                mime="Doc/pdf",
+                use_container_width=True
+                )        
+        with col21:
+            st.image('https://i.imgur.com/gpKw594.jpg')
+
     def sp24():
         col11,col12 = st.columns(2)
         with col11:
@@ -263,95 +348,17 @@ if option == "Ozono Agua":
             st.image('https://i.imgur.com/mcAZEg0.jpg')
 
 
-    
-
     if calcule == True:
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
             sp24()
 
         if Pr>2 and Pr<=12:
-            col13,col14 = st.columns(2)
-            with col13:
-                st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Composición: 1 Celda de 15 Gr</p>", unsafe_allow_html=True)
-                DSP520 = pd.DataFrame({
-                'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
-                'Conc. O3 (gr/m3)': [75,69,67,62,58,48,43,40,37],
-                'Prod. O3 (g/h)': [4.5,8.28,12.06,14.88,17.4,17.28,18.06,19.2,19.98]
-                })
-                st.dataframe(DSP520, hide_index=True, use_container_width=True)
-                with open("Ficha Técnica SP5.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP5.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col14:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
+            sp520()
+            sp545()
+            sp560()
+            sp18()
 
-            col13,col14 = st.columns(2)
-            with col13:
-                st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
-                DSP520 = pd.DataFrame({
-                'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
-                'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
-                'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
-                })
-                st.dataframe(DSP520, hide_index=True, use_container_width=True)
-                with open("Ficha Técnica SP5.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP560g.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col14:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
-
-            col20,col21 = st.columns(2)
-            with col20:
-                st.markdown("<h4 style='text-align: center;'>SP-18 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
-                DSP520 = pd.DataFrame({
-                'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
-                'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
-                'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
-                })
-                with open("Ficha Técnica SP18.pdf", "rb") as file:
-                    btn5 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP18.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col21:
-                st.image('https://i.imgur.com/gpKw594.jpg')
-
-            col22,col23 = st.columns(2)
-            with col22:
-                st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
-                DSP520 = pd.DataFrame({
-                'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
-                'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
-                'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
-                })
-                with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP 20.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col23:
-                st.image('https://i.imgur.com/cJRniPE.jpg')
 
         if Pr>12 and Pr<=20:
             col11,col12 = st.columns(2)
