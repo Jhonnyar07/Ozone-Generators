@@ -313,8 +313,8 @@ if option == "Ozono Agua":
             'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
             'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
             })
-            st.dataframe(DSP18, hide_index=True, use_container_width=True)
-            with open("Ficha Técnica SP18.pdf", "rb") as file:
+        st.dataframe(DSP18, hide_index=True, use_container_width=True)
+        with open("Ficha Técnica SP18.pdf", "rb") as file:
                 btn5 = st.download_button(
                 label="Ficha Técnica",
                 data=file,
@@ -335,8 +335,8 @@ if option == "Ozono Agua":
             'Conc. O3 (gr/m3)': [42.8],
             'Prod. O3 (g/h)': [2.58]
             })
-            st.dataframe(DSP520, hide_index=True, use_container_width=True)
-            with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
+        st.dataframe(DSP520, hide_index=True, use_container_width=True)
+        with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
                 btn1 = st.download_button(
                 label="Ficha Técnica",
                 data=file,
