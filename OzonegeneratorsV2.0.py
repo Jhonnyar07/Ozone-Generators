@@ -476,8 +476,10 @@ if option == "Ozono Agua":
 if option == "Ozono Aire":
     def spal(name,prod):
         name + ' - Prod. Nominal: ' + prod + ' gr/h'
+    
+    spal('Z1250T','0.017')
 
-    st.selectbox('Seleccione un equipo:', (spal('Z1250T','0.017')), index=None)
+    #st.selectbox('Seleccione un equipo:', (spal('Z1250T','0.017')), index=None)
 
     st.divider()
     col17,col18,col19 = st.columns(3)
