@@ -261,9 +261,9 @@ if option == "Ozono Agua":
                 st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
                 st.markdown("<p style='text-align: center;'>1 Celda de 15 Gr</p>", unsafe_allow_html=True)
                 DSP520 = pd.DataFrame({
-                'Caudal Oxigeno (l/min)': [1,2,3,4,5,6,7,8,9],
-                'Concentración O3 (gr/m3)': [75,69,67,62,58,48,43,40,37],
-                'Producción O3 (g/h)': [4.5,8.28,12.06,14.88,17.4,17.28,18.06,19.2,19.98]
+                'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
+                'Conc. O3 (gr/m3)': [75,69,67,62,58,48,43,40,37],
+                'Prod. O3 (g/h)': [4.5,8.28,12.06,14.88,17.4,17.28,18.06,19.2,19.98]
                 })
                 st.dataframe(DSP520, hide_index=True, use_container_width=True)
                 with open("Ficha Técnica SP5.pdf", "rb") as file:
