@@ -237,23 +237,28 @@ if option == "Ozono Agua":
         st.markdown("<h3 style='text-align: center; color:green'>{}</h3>".format(str(Pr)), unsafe_allow_html=True)
         st.divider()
     
+def sp24():
+    col11,col12 = st.columns(2)
+    with col11:
+        st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 5 gr/h <br> Capacidad Nominal: 2.8 gr/h </p>", unsafe_allow_html=True)
+        with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
+            btn1 = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="Ficha tecnica SP 24 v3.pdf",
+            mime="Doc/pdf",
+            use_container_width=True
+            )
+    with col12:
+        st.image('https://i.imgur.com/mcAZEg0.jpg')
+
+
+
     if calcule == True:
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
-            col11,col12 = st.columns(2)
-            with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 5 gr/h <br> Capacidad Nominal: 2.8 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha tecnica SP 24 v3.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )
-            with col12:
-                st.image('https://i.imgur.com/mcAZEg0.jpg')
+            sp24()
 
         if Pr>2 and Pr<=12:
             col13,col14 = st.columns(2)
@@ -280,7 +285,7 @@ if option == "Ozono Agua":
             col13,col14 = st.columns(2)
             with col13:
                 st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Composición: 3 Celda de 15 Gr en serie</p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
                 DSP520 = pd.DataFrame({
                 'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
                 'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
@@ -300,8 +305,13 @@ if option == "Ozono Agua":
 
             col20,col21 = st.columns(2)
             with col20:
-                st.markdown("<h4 style='text-align: center;'>SP-18</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<h4 style='text-align: center;'>SP-18 60 gr</h4>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+                DSP520 = pd.DataFrame({
+                'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
+                'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
+                'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
+                })
                 with open("Ficha Técnica SP18.pdf", "rb") as file:
                     btn5 = st.download_button(
                     label="Ficha Técnica",
@@ -316,7 +326,12 @@ if option == "Ozono Agua":
             col22,col23 = st.columns(2)
             with col22:
                 st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
+                st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+                DSP520 = pd.DataFrame({
+                'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
+                'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
+                'Prod. O3 (g/h)': [3.6,8.04,12.636,17.28,21.3,22.68,23.94,24,23.22]
+                })
                 with open("Ficha Técnica SP 20.pdf", "rb") as file:
                     btn1 = st.download_button(
                     label="Ficha Técnica",
@@ -327,21 +342,6 @@ if option == "Ozono Agua":
                     )        
             with col23:
                 st.image('https://i.imgur.com/cJRniPE.jpg')
-
-            col11,col12 = st.columns(2)
-            with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-21 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP21.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP21.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col12:
-                st.image('https://i.imgur.com/jVRU4mY.jpg')
 
         if Pr>12 and Pr<=20:
             col11,col12 = st.columns(2)
