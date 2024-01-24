@@ -481,6 +481,25 @@ if option == "Ozono Aire":
         'Z6000T - Prod. Nominal: 75 mg/h',
         'Z10000T - Prod. Nominal: 95 mg/h',
         'Z20000T - Prod. Nominal: 120 mg/h',
+        'ZHI1250 - Prod. Nominal: 17 mg/h',
+        'ZHI3000 - Prod. Nominal: 34 mg/h',
+        'ZHI6000 - Prod. Nominal: 75 mg/h',
+        'ZHI10000 - Prod. Nominal: 95 mg/h',
+        'ZHI300MG - Prod. Nominal: 1 gr/h',
+        'ZHI500MG - Prod. Nominal: 1.3 gr/h',
+        'ZHI1000MG - Prod. Nominal: 1.7 gr/h',
+        'SPMINI300MG - Prod. Nominal: 1.7 gr/h',
+        'SPMINI500MG - Prod. Nominal: 2 gr/h',
+        'SPMINI1G - Prod. Nominal: 3 gr/h',
+        'SPMINI2G - Prod. Nominal: 2.8 gr/h',
+        'SP300MG - Prod. Nominal: 1.7 gr/h',
+        'SP500MG - Prod. Nominal: 2 gr/h',
+        'SP1G - Prod. Nominal: 3 gr/h',
+        'SP2G - Prod. Nominal: 2.8 gr/h',
+        'SP4G - Prod. Nominal: 1.7 gr/h',
+        'SP8G - Prod. Nominal: 5.2 gr/h',
+        'SP10G - Prod. Nominal: 3.1 gr/h',
+        'SP15G - Prod. Nominal: 0.6 gr/h'
     ), index=None)
 
     st.divider()
