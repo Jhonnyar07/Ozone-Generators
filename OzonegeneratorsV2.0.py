@@ -241,7 +241,7 @@ if option == "Ozono Agua":
         col13,col14 = st.columns(2)
         with col13:
             st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 1 Celda de 15 Gr</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 1 Celda OC15</p>", unsafe_allow_html=True)
             DSP520 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [75,69,67,62,58,48,43,40,37],
@@ -263,7 +263,7 @@ if option == "Ozono Agua":
         col13,col14 = st.columns(2)
         with col13:
             st.markdown("<h4 style='text-align: center;'>SP-5 45 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 2 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 2 Celdas OC15 en serie</p>", unsafe_allow_html=True)
             DSP545 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [70,71,72,70,67,60,59,56,52],
@@ -285,7 +285,7 @@ if option == "Ozono Agua":
         col13,col14 = st.columns(2)
         with col13:
             st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas OC15 en serie</p>", unsafe_allow_html=True)
             DSP560 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
@@ -307,7 +307,7 @@ if option == "Ozono Agua":
         col20,col21 = st.columns(2)
         with col20:
             st.markdown("<h4 style='text-align: center;'>SP-18 60 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas OC15 en serie</p>", unsafe_allow_html=True)
             DSP18 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
@@ -329,7 +329,7 @@ if option == "Ozono Agua":
         col22,col23 = st.columns(2)
         with col22:
             st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 3 Celdas OC15 en serie</p>", unsafe_allow_html=True)
             DSP2060 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [60,67,70.2,72,71,63,57,50,43],
@@ -351,7 +351,7 @@ if option == "Ozono Agua":
         col22,col23 = st.columns(2)
         with col22:
             st.markdown("<h4 style='text-align: center;'>SP-20 80 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 4 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 4 Celdas OC15 en serie</p>", unsafe_allow_html=True)
             DSP2080 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [51,56,60,62,66,66,62,55,46],
@@ -373,7 +373,7 @@ if option == "Ozono Agua":
         col15,col16 = st.columns(2)
         with col15:
             st.markdown("<h4 style='text-align: center;'>SP-23 80 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 4 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 4 Celdas OC15 en serie</p>", unsafe_allow_html=True)
             DSP23 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [51,56,60,62,66,66,62,55,46],
@@ -417,7 +417,7 @@ if option == "Ozono Agua":
         col24,col25 = st.columns(2)
         with col24:
             st.markdown("<h4 style='text-align: center;'>SP-25 40 gr</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center;'>Composición: 2 Celdas de 15 Gr en serie</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center;'>Composición: 2 Celdas OC15 en serie</p>", unsafe_allow_html=True)
             DSP25 = pd.DataFrame({
             'Caudal O2 (l/min)': [1,2,3,4,5,6,7,8,9],
             'Conc. O3 (gr/m3)': [70,71,72,70,67,60,59,56,52],
@@ -472,6 +472,12 @@ if option == "Ozono Agua":
 
 
 #OZONE IN AIR CALCULE
+    
+def spal(name,prod):
+    name + ' - Prod. Nominal: ' + prod + ' gr/h'
+
+st.selectbox('Seleccione un equipo:', (spal('Z1250T',0.017)))
+
 if option == "Ozono Aire":
     st.divider()
     col17,col18,col19 = st.columns(3)
