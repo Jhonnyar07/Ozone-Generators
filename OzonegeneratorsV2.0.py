@@ -252,7 +252,7 @@ if option == "Ozono Agua":
                 btn1 = st.download_button(
                 label="Ficha Técnica",
                 data=file,
-                file_name="Ficha Técnica SP5.pdf",
+                file_name="Ficha Técnica SP520.pdf",
                 mime="Doc/pdf",
                 use_container_width=True
                 )        
@@ -274,7 +274,7 @@ if option == "Ozono Agua":
                 btn2 = st.download_button(
                 label="Ficha Técnica",
                 data=file,
-                file_name="Ficha Técnica SP560g.pdf",
+                file_name="Ficha Técnica SP545g.pdf",
                 mime="Doc/pdf",
                 use_container_width=True
                 )        
