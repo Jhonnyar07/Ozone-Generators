@@ -628,7 +628,7 @@ if option == "Ozono Aire":
         if Pr == None:
             Co = 0
         else:
-            Co=float("{:.2f}".format((Pr/(Qg*60))*1000))
+            Co=float("{:.4f}".format((Pr/(Qg*60))*1000))
         st.markdown("<p style='text-align: center;'>{}</p>".format(str(Co)), unsafe_allow_html=True)
     with col2:
         st.markdown("<p style='text-align: center;'>Constante K</p>", unsafe_allow_html=True)
