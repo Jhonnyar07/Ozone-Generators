@@ -713,19 +713,23 @@ if option == "Ozono Aire":
     Pr = SelectedPr
 
     if optiona != None:
-        st.selectbox('Unidad',('Metro Cúbico (m3)','Litros (L)'))
+        col17,col18= st.columns(2)
+        with col17:
+            m3 = st.checkbox('Metro cúbico (m3)')
+        with col18:
+            Ltrs = st.checkbox('Litros (L)')
         Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
 
     if optiona == 'Calculo sin generador asignado' and Ve != None:
         st.divider()
-        col17,col18= st.columns(2)
-        with col17:
+        col19,col20= st.columns(2)
+        with col19:
             if optiona == None:
                 Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
             else:
                 Qg = st.number_input("Caudal de salida del gas (L/min)", value= SelectedQg)
 
-        with col18:
+        with col20:
             if optiona == None:
                 Pr = st.number_input("Producción seleccionada (g/h)", value=None)
             else:
