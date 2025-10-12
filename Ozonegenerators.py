@@ -431,27 +431,43 @@ else:
             if not recomendados:
                 st.info("No se encontraron sistemas recomendados para este valor de Pr.")
             else:
-                # Mostrar los sistemas en pares de columnas
-                for i in range(0, len(recomendados), 2):
-                    cols = st.columns(2)
-                    for col, sistema in zip(cols, recomendados[i:i+2]):
-                        with col:
-                            st.markdown(f"<h4 style='text-align: center;'>{sistema['modelo']}</h4>", unsafe_allow_html=True)
-                            st.markdown(
-                                f"<p style='text-align: center;'>"
-                                f"Gas de alimentación: {sistema['gas']} <br>"
-                                f"Caudal Gas: {sistema['caudal']} <br>"
-                                f"Capacidad Nominal: {sistema['nominal']}</p>",
-                                unsafe_allow_html=True
-                            )
-                            with open(sistema["pdf"], "rb") as file:
-                                st.download_button(
-                                    label="Ficha Técnica",
-                                    data=file,
-                                    file_name=sistema["pdf"],
-                                    mime="Doc/pdf",
-                                    use_container_width=True
+                if st.session_state.franchise:
+                    # Mostrar los sistemas en pares de columnas
+                    for i in range(0, len(recomendados), 2):
+                        cols = st.columns(2)
+                        for col, sistema in zip(cols, recomendados[i:i+2]):
+                            with col:
+                                st.markdown(f"<h4 style='text-align: center;'>{sistema['modelo']}</h4>", unsafe_allow_html=True)
+                                with open(sistema["pdf"], "rb") as file:
+                                    st.download_button(
+                                        label="Ficha Técnica",
+                                        data=file,
+                                        file_name=sistema["pdf"],
+                                        mime="Doc/pdf",
+                                        use_container_width=True
+                                    )
+                else:
+                    # Mostrar los sistemas en pares de columnas
+                    for i in range(0, len(recomendados), 2):
+                        cols = st.columns(2)
+                        for col, sistema in zip(cols, recomendados[i:i+2]):
+                            with col:
+                                st.markdown(f"<h4 style='text-align: center;'>{sistema['modelo']}</h4>", unsafe_allow_html=True)
+                                st.markdown(
+                                    f"<p style='text-align: center;'>"
+                                    f"Gas de alimentación: {sistema['gas']} <br>"
+                                    f"Caudal Gas: {sistema['caudal']} <br>"
+                                    f"Capacidad Nominal: {sistema['nominal']}</p>",
+                                    unsafe_allow_html=True
                                 )
+                                with open(sistema["pdf"], "rb") as file:
+                                    st.download_button(
+                                        label="Ficha Técnica",
+                                        data=file,
+                                        file_name=sistema["pdf"],
+                                        mime="Doc/pdf",
+                                        use_container_width=True
+                                    )
                                 
                     
         st.divider()
