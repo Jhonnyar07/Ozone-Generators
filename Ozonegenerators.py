@@ -724,8 +724,6 @@ if option == "Ozono Aire":
         elif selection == 1:
             Ve = Vei
 
-    
-
     if optiona == 'Calculo sin generador asignado' and Ve != None:
         st.divider()
         col19,col20= st.columns(2)
@@ -741,7 +739,9 @@ if option == "Ozono Aire":
             else:
                 Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
 
-    
+    if Vei is None:
+        st.error("❌ Debes introducir un volumen antes de calcular.")
+        st.stop()
 
     col1,col2,col3 = st.columns(3)
     with col1:
