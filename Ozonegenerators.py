@@ -57,7 +57,7 @@ else:
     options=calcule_option.keys(),
     format_func=lambda option: calcule_option[option],
     selection_mode="single",
-    width="content",
+    width="stretch",
     )
 
     option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Aire'), index=None)
