@@ -49,8 +49,8 @@ else:
 
     #Selecting the calcule for Ozone gas or water
     calcule_option = {
-        0: 'Ozono Agua',
-        1: 'Ozono Aire',
+        0: ':droplet: Ozono Agua',
+        1: ':dash: Ozono Aire',
     }
     option = st.pills(
     "Tipo de instalación:",
