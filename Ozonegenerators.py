@@ -50,6 +50,31 @@ if option == "Ozono Agua":
             mime="Doc/pdf",
             use_container_width=True
           )
+    if Pump == 'CM 5-7':
+        Co5= 1500
+        V5= 2900
+        Q5= 4.7
+        H5 = 54.46
+        Pt5= 10
+        P5 = float("{:.2f}".format((H1*9.8*1000)/100000))
+        D5 = pd.DataFrame({
+        'Consumo (Watts)': [Co5],
+        'Velocidad (RPM)': [V5],
+        'Caudal (m3/h)': [Q5],
+        'Altura (m)': [H5],
+        'P. trabajo @-22/55 ºC (Bar)': [Pt5],
+        'P. Descarga (Bar)': [P5]
+        })
+        st.dataframe(D1, hide_index=True, use_container_width=True)
+        with open("98645137_CM_57_ARAEAVBE_FAAN.pdf", "rb") as file:
+            btn = st.download_button(
+            label="Ficha Técnica",
+            data=file,
+            file_name="98645137_CM_57_ARAEAVBE_FAAN.pdf",
+            mime="Doc/pdf",
+            use_container_width=True
+          )
+            
     if Pump == 'CM 10-1':
         Co2= 670
         V2= 2800
