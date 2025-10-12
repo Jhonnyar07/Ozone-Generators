@@ -28,7 +28,7 @@ if "logueado" not in st.session_state:
     st.session_state.logueado = False
     st.session_state.franchise = False
 
-if not st.session_state.logueado and st.session_state.franchise:
+if not st.session_state.logueado:
     st.markdown("<h2 style='text-align: center;'>Control de Acceso</h2>", unsafe_allow_html=True)
     username = st.text_input("Usuario")
     password = st.text_input("Contraseña", type="password")
