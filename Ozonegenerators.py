@@ -713,12 +713,12 @@ if option == "Ozono Aire":
     Pr = SelectedPr
 
     if optiona != None:
-        Vei = st.number_input("Volumen del espacio a tratar", value=None)
         option_map ={
             0:'Metros cúbicos (m3)',
             1: 'Litros (L)',
         }
         selection = st.pills('Unidad', options=option_map.keys(),format_func=lambda option: option_map[option],selection_mode="single",)
+        Vei = st.number_input("Volumen del espacio a tratar", value=None)
 
     if selection == 0 and optiona != None:
         Ve = Vei*1000
