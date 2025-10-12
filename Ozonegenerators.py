@@ -336,9 +336,9 @@ if option == "Ozono Agua":
         recomendados = [s for s in sistemas if s["min"] <= Pr <= s["max"]]
 
         # Si no hay coincidencias y Pr > 20, mostrar nota
-        if Pr > 20:
-            st.markdown("<h4 style='text-align: center;'>NOTA: Para concentraciones mayores a 28 gr/h considere la combinación de 2 o más sistemas</h4>", unsafe_allow_html=True)
-            recomendados = [s for s in sistemas if s["max"] == 20]  # mostrar los más potentes
+        if Pr > 50:
+            st.markdown("<h4 style='text-align: center;'>NOTA: Para concentraciones mayores a 50 gr/h considere la combinación de 2 o más sistemas</h4>", unsafe_allow_html=True)
+            recomendados = [s for s in sistemas if s["max"] == 50]  # mostrar los más potentes
 
         if not recomendados:
             st.info("No se encontraron sistemas recomendados para este valor de Pr.")
