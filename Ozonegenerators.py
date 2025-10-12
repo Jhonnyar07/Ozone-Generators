@@ -619,7 +619,82 @@ if option == "Ozono Aire":
                                                                       'SP5 30','SP5 45','SP5 60','SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30',
                                                                       'SP18','SP20A'), index=None)
     
-    
+    if optiona == None:
+        SelectedQg=None
+    elif optiona == 'Z1250T':
+        SelectedQg=518
+    elif optiona == 'Z3000T':
+        SelectedQg=518
+    elif optiona == 'Z6000T':
+        SelectedQg=518
+    elif optiona == 'Z10000T':
+        SelectedQg=518
+    elif optiona == 'Z20000T':
+        SelectedQg=518
+    elif optiona == 'ZHI1250':
+        SelectedQg=8
+    elif optiona == 'ZHI3000':
+        SelectedQg=8      
+    elif optiona == 'ZHI6000':
+        SelectedQg=8
+    elif optiona == 'ZHI10000':
+        SelectedQg=8
+    elif optiona == 'ZHI300MG':
+        SelectedQg=8
+    elif optiona == 'ZHI500MG':
+        SelectedQg=8
+    elif optiona == 'ZHI1000MG':
+        SelectedQg=8
+    elif optiona == 'Cañon 5':
+        SelectedQg=3333
+    elif optiona == 'Cañon 12':
+        SelectedQg=3333
+    elif optiona == 'SP Mini 300mg':
+        SelectedQg=8
+    elif optiona == 'SP Mini 500mg':
+        SelectedQg=8
+    elif optiona == 'SP Mini 1g':
+        SelectedQg=8
+    elif optiona == 'SP Mini 2g':
+        SelectedQg=8
+    elif optiona == 'SP 300mg':
+        SelectedQg=30
+    elif optiona == 'SP 500mg':
+        SelectedQg=30
+    elif optiona == 'SP 1g':
+        SelectedQg=30
+    elif optiona == 'SP 2g':
+        SelectedQg=30
+    elif optiona == 'SP 4g':
+        SelectedQg=30
+    elif optiona == 'SP 8g':
+        SelectedQg=30
+    elif optiona == 'SP 10g':
+        SelectedQg=30
+    elif optiona == 'SP 15g':
+        SelectedQg=30
+    elif optiona == 'SP5 20':
+        SelectedQg=10
+    elif optiona == 'SP5 30':
+        SelectedQg=10
+    elif optiona == 'SP5 45':
+        SelectedQg=10
+    elif optiona == 'SP5 60':
+        SelectedQg=10
+    elif optiona == 'SP21 20':
+        SelectedQg=1.5
+    elif optiona == 'SP21 40':
+        SelectedQg=1.5
+    elif optiona == 'SP5 Oxi 20':
+        SelectedQg=1.5
+    elif optiona == 'SP5 Oxi 30':
+        SelectedQg=1.5
+    elif optiona == 'SP18':
+        SelectedQg=10
+    elif optiona == 'SP20A':
+        SelectedQg=510
+
+
     st.divider()
     col17,col18,col19 = st.columns(3)
     with col17:
@@ -628,77 +703,7 @@ if option == "Ozono Aire":
         if optiona == None:
             Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
         elif optiona == 'Z1250T':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
-        elif optiona == 'Z3000T':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
-        elif optiona == 'Z6000T':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
-        elif optiona == 'Z10000T':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
-        elif optiona == 'Z20000T':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
-        elif optiona == 'ZHI1250':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'ZHI3000':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)        
-        elif optiona == 'ZHI6000':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'ZHI10000':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'ZHI300MG':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'ZHI500MG':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'ZHI1000MG':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'Cañon 5':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=3333)
-        elif optiona == 'Cañon 12':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=3333)
-        elif optiona == 'SP Mini 300mg':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'SP Mini 500mg':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'SP Mini 1g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'SP Mini 2g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
-        elif optiona == 'SP 300mg':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP 500mg':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP 1g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP 2g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP 4g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP 8g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP 10g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP 15g':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
-        elif optiona == 'SP5 20':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
-        elif optiona == 'SP5 30':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
-        elif optiona == 'SP5 45':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
-        elif optiona == 'SP5 60':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
-        elif optiona == 'SP21 20':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
-        elif optiona == 'SP21 40':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
-        elif optiona == 'SP5 Oxi 20':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
-        elif optiona == 'SP5 Oxi 30':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
-        elif optiona == 'SP18':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
-        elif optiona == 'SP20A':
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=510)
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value= SelectedQg)
 
     with col19:
         if optiona == None:
