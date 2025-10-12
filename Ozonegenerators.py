@@ -56,7 +56,7 @@ if option == "Ozono Agua":
         Q5= 4.7
         H5 = 54.46
         Pt5= 10
-        P5 = float("{:.2f}".format((H1*9.8*1000)/100000))
+        P5 = float("{:.2f}".format((H5*9.8*1000)/100000))
         D5 = pd.DataFrame({
         'Consumo (Watts)': [Co5],
         'Velocidad (RPM)': [V5],
