@@ -161,6 +161,8 @@ if option == "Ozono Agua":
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=None)
         elif Pump == 'CM 3-5':
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q1*Np)
+        elif Pump == 'CM 5-7':
+            Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q5*Np)
         elif Pump == 'CM 10-1':
             Qr = st.number_input("Caudal de recirculación (m3/h)", value=Q2*Np)
         elif Pump == 'CM 10-2':
