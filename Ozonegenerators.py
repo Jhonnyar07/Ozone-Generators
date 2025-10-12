@@ -54,7 +54,7 @@ else:
         0: ':droplet: Ozono Agua',
         1: ':dash: Ozono Aire',
     }
-    option = st.pills(
+    option = st.pills('',
     options=calcule_option.keys(),
     format_func=lambda option: calcule_option[option],
     selection_mode="single",
