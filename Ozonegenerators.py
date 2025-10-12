@@ -756,10 +756,10 @@ if option == "Ozono Aire":
             0:'Metros cúbicos (m3)',
             1: 'Litros (L)',
         }
-        selection = st.pills('Unidad', options=option_map.keys(),format_func=lambda option: option_map[option],selection_mode="single",)
-        if selection == 0:
+        airUnitSelection = st.pills('Unidad', options=option_map.keys(),format_func=lambda option: option_map[option],selection_mode="single",)
+        if airUnitSelection == 0:
             Ve = Vei*1000
-        elif selection == 1:
+        elif airUnitSelection == 1:
             Ve = Vei
 
     if optiona == 'Calculo sin generador asignado' and Vei != None:
@@ -795,14 +795,17 @@ if option == "Ozono Aire":
     calcule = st.button("Calcular",use_container_width=True)
 
     if calcule == True:
+        if airUnitSelection is None:
+            st.error("❌ Debes seleccionar la unidad de Volumen antes de calcular.")
+            st.stop()
         if Vei is None:
-            st.error("❌ Debes introducir un volumen antes de calcular.")
+            st.error("❌ Debes introducir un Volumen antes de calcular.")
             st.stop()
         if Qg is None:
-            st.error("❌ Debes introducir un valor de caudal antes de calcular.")
+            st.error("❌ Debes introducir un Valor de caudal antes de calcular.")
             st.stop()
         if Pr is None:
-            st.error("❌ Debes introducir un valor de producción antes de calcular.")
+            st.error("❌ Debes introducir un Valor de producción antes de calcular.")
             st.stop()
         st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
         #Variables of air ozone
