@@ -65,7 +65,7 @@ if option == "Ozono Agua":
         'P. trabajo @-22/55 ºC (Bar)': [Pt5],
         'P. Descarga (Bar)': [P5]
         })
-        st.dataframe(D1, hide_index=True, use_container_width=True)
+        st.dataframe(D5, hide_index=True, use_container_width=True)
         with open("98645137_CM_57_ARAEAVBE_FAAN.pdf", "rb") as file:
             btn = st.download_button(
             label="Ficha Técnica",
