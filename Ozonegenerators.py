@@ -220,6 +220,19 @@ if option == "Ozono Agua":
             st.markdown("<p style='text-align: center;'>{}</p>".format(str(Cm)), unsafe_allow_html=True)            
 
     calcule = st.button("Calcular",use_container_width=True)
+
+    if Vr is None:
+        st.error("❌ Debes introducir un volumen antes de calcular.")
+        st.stop()
+    if Qr is None:
+        st.error("❌ Debes introducir un Caudal de Recirculación antes de calcular.")
+        st.stop()
+    if Qc is None:
+        st.error("❌ Debes introducir un Caudal de Consumo antes de calcular.")
+        st.stop()
+    if C is None:
+        st.error("❌ Debes introducir una concentración objetivo antes de calcular.")
+        st.stop()
     
     #Parameters Calcule
     if optionw == 'Agua Potable' and calcule == True:
@@ -264,18 +277,6 @@ if option == "Ozono Agua":
         st.divider()
     
     if calcule == True:
-        if Vr is None:
-            st.error("❌ Debes introducir un volumen antes de calcular.")
-            st.stop()
-        if Qr is None:
-            st.error("❌ Debes introducir un Caudal de Recirculación antes de calcular.")
-            st.stop()
-        if Qc is None:
-            st.error("❌ Debes introducir un Caudal de Consumo antes de calcular.")
-            st.stop()
-        if C is None:
-            st.error("❌ Debes introducir una concentración objetivo antes de calcular.")
-            st.stop()
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
             col11,col12 = st.columns(2)
