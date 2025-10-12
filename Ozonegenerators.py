@@ -286,40 +286,40 @@ if option == "Ozono Agua":
         "original": "0.03 gr/h", "nominal": "0.03 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (3000).pdf",
         "imagen": ""},        
         {"min": 0, "max": 2, "modelo": "ZHI6000", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.06 gr/h", "nominal": "0.06 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
+        "original": "0.06 gr/h", "nominal": "0.06 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (6000).pdf",
         "imagen": ""},        
         {"min": 0, "max": 2, "modelo": "ZHI10000", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.08 gr/h", "nominal": "0.08 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
+        "original": "0.08 gr/h", "nominal": "0.08 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (10000).pdf",
         "imagen": ""},       
         {"min": 0, "max": 2, "modelo": "ZHI300MG", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.29 gr/h", "nominal": "0.29 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
+        "original": "0.29 gr/h", "nominal": "0.29 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (300mg).pdf",
         "imagen": ""},        
         {"min": 0, "max": 2, "modelo": "ZHI500MG", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.32 gr/h", "nominal": "0.32 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
+        "original": "0.32 gr/h", "nominal": "0.32 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (500mg).pdf",
         "imagen": ""},        
         {"min": 0, "max": 2, "modelo": "ZHI1000MG", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.57 gr/h", "nominal": "0.57 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
+        "original": "0.57 gr/h", "nominal": "0.57 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (1000mg).pdf",
         "imagen": ""},      
         {"min": 0, "max": 2, "modelo": "SP Mini 300MG", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.29 gr/h", "nominal": "0.29 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024.pdf",
+        "original": "0.29 gr/h", "nominal": "0.29 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024 (300mg).pdf",
         "imagen": ""},   
         {"min": 0, "max": 2, "modelo": "SP Mini 500MG", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.34 gr/h", "nominal": "0.34 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024.pdf",
+        "original": "0.34 gr/h", "nominal": "0.34 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024 (500mg).pdf",
         "imagen": ""},    
         {"min": 0, "max": 2, "modelo": "SP Mini 1g", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.57 gr/h", "nominal": "0.57 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024.pdf",
+        "original": "0.57 gr/h", "nominal": "0.57 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024 (1g).pdf",
         "imagen": ""},    
         {"min": 0, "max": 2, "modelo": "SP Mini 2g", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.94 gr/h", "nominal": "0.94 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024.pdf",
+        "original": "0.94 gr/h", "nominal": "0.94 gr/h", "pdf": "TDS SP MINI ES TTO Biocida 2024 (2g).pdf",
         "imagen": ""},    
         {"min": 0, "max": 2, "modelo": "SP 300MG", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.27 gr/h", "nominal": "0.27 gr/h", "pdf": "TDS SP ES TTO Biocida 2024.pdf",
+        "original": "0.27 gr/h", "nominal": "0.27 gr/h", "pdf": "TDS SP ES TTO Biocida 2024 (300mg).pdf",
         "imagen": ""},   
         {"min": 0, "max": 2, "modelo": "SP 500MG", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.34 gr/h", "nominal": "0.34 gr/h", "pdf": "TDS SP ES TTO Biocida 2024.pdf",
+        "original": "0.34 gr/h", "nominal": "0.34 gr/h", "pdf": "TDS SP ES TTO Biocida 2024 (500mg).pdf",
         "imagen": ""},    
         {"min": 0, "max": 2, "modelo": "SP 1g", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.41 gr/h", "nominal": "0.41 gr/h", "pdf": "TDS SP ES TTO Biocida 2024.pdf",
+        "original": "0.41 gr/h", "nominal": "0.41 gr/h", "pdf": "TDS SP ES TTO Biocida 2024 (1g).pdf",
         "imagen": ""},    
   
 
@@ -402,14 +402,7 @@ if option == "Ozono Agua":
                             f"Capacidad Nominal: {sistema['nominal']}</p>",
                             unsafe_allow_html=True
                         )
-                        with open(sistema["pdf"], "rb") as file:
-                            st.download_button(
-                                label="Ficha Técnica",
-                                data=file,
-                                file_name=sistema["pdf"],
-                                mime="Doc/pdf",
-                                use_container_width=True
-                            )
+
                             
                 
     st.divider()
