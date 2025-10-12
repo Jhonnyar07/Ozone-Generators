@@ -279,51 +279,53 @@ if option == "Ozono Agua":
         # --- Tabla con todos los sistemas y sus rangos ---
         sistemas = [
         # Pr <= 2
-        {"min": 0, "max": 2, "modelo": "SP-24", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
-        "original": "5 gr/h", "nominal": "2.8 gr/h", "pdf": "Ficha tecnica SP 24 v3.pdf",
-        "imagen": "https://i.imgur.com/mcAZEg0.jpg"},
 
         # 2 < Pr <= 4
-        {"min": 2, "max": 4, "modelo": "SP-5 20 Oxi", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
-        "original": "—", "nominal": "4.5 gr/h", "pdf": "Ficha Técnica SP5 oxi.pdf",
-        "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
+        {"min": 2, "max": 4, "modelo": "SP-24", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
+        "original": "5 gr/h", "nominal": "3.96 gr/h", "pdf": "Ficha tecnica SP 24 v3.pdf",
+        "imagen": "https://i.imgur.com/mcAZEg0.jpg"},
 
         # 4 < Pr <= 7
-        {"min": 4, "max": 7, "modelo": "SP-5 30 Oxi", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
-        "original": "30 gr/h", "nominal": "6.4 gr/h", "pdf": "Ficha Técnica SP5 oxi.pdf",
+        {"min": 4, "max": 7, "modelo": "SP-21 20", "gas": "Oxígeno @90-94%", "caudal": "1.5 L/min",
+        "original": "20 gr/h", "nominal": "6.63 gr/h", "pdf": "Ficha Técnica SP21.pdf",
+        "imagen": "https://i.imgur.com/jVRU4mY.jpg"},        
+        {"min": 4, "max": 7, "modelo": "SP-5 Oxi 20", "gas": "Oxígeno @90-94%", "caudal": "1.5 L/min",
+        "original": "—", "nominal": "6.63 gr/h", "pdf": "Ficha Técnica SP5 oxi.pdf",
         "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
-
+ 
         # 7 < Pr <= 12
-        {"min": 7, "max": 12, "modelo": "SP-5 20 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "20 gr/h", "nominal": "20 gr/h", "pdf": "Ficha Técnica SP5.pdf",
+        {"min": 7, "max": 12, "modelo": "SP-5 Oxi 30", "gas": "Oxígeno @90-94%", "caudal": "1.5 L/min",
+        "original": "30 gr/h", "nominal": "8.49 gr/h", "pdf": "Ficha Técnica SP5 oxi.pdf",
         "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
-        {"min": 7, "max": 12, "modelo": "SP-18", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "60 gr/h", "nominal": "23.22 gr/h", "pdf": "Ficha Técnica SP18.pdf",
-        "imagen": "https://i.imgur.com/gpKw594.jpg"},
-        {"min": 7, "max": 12, "modelo": "SP-20 60 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "60 gr/h", "nominal": "23.22 gr/h", "pdf": "Ficha Técnica SP 20.pdf",
-        "imagen": "https://i.imgur.com/cJRniPE.jpg"},
-        {"min": 7, "max": 12, "modelo": "SP-21 20 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "20 gr/h", "nominal": "20 gr/h", "pdf": "Ficha Técnica SP21.pdf",
+        {"min": 7, "max": 12, "modelo": "SP-21 40", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "40 gr/h", "nominal": "8.49 gr/h", "pdf": "Ficha Técnica SP21.pdf",
         "imagen": "https://i.imgur.com/jVRU4mY.jpg"},
 
         # 12 < Pr <= 20
-        {"min": 12, "max": 20, "modelo": "SP-20 80 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "80 gr/h", "nominal": "25 gr/h", "pdf": "Ficha Técnica SP 20.pdf",
-        "imagen": "https://i.imgur.com/cJRniPE.jpg"},
-        {"min": 12, "max": 20, "modelo": "SP-21 40 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "40 gr/h", "nominal": "28 gr/h", "pdf": "Ficha Técnica SP21.pdf",
-        "imagen": "https://i.imgur.com/jVRU4mY.jpg"},
-        {"min": 12, "max": 20, "modelo": "SP-22", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "40 gr/h", "nominal": "28 gr/h", "pdf": "Ficha Técnica SP22.pdf",
+
+        # 20 < Pr <= 45
+        {"min": 20, "max": 45, "modelo": "SP-22", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "40 gr/h", "nominal": "31.65 gr/h", "pdf": "Ficha Técnica SP22.pdf",
         "imagen": "https://i.imgur.com/fA7a6Sn.jpg"},
-        {"min": 12, "max": 20, "modelo": "SP-23", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "80 gr/h", "nominal": "25 gr/h",
+        {"min": 20, "max": 45, "modelo": "SP-23", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "80 gr/h", "nominal": "40.16 gr/h",
         "pdf": "Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf",
         "imagen": "https://i.imgur.com/6zK69Kq.jpg"},
-        {"min": 12, "max": 20, "modelo": "SP-25", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
-        "original": "40 gr/h", "nominal": "28 gr/h", "pdf": "Ficha tecnica SP 25.pdf",
+        {"min": 20, "max": 45, "modelo": "SP-25", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "40 gr/h", "nominal": "31.65 gr/h", "pdf": "Ficha tecnica SP 25.pdf",
         "imagen": "https://i.imgur.com/OI3WF8q.jpg"},
+        {"min": 20, "max": 45, "modelo": "SP-5 20 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "20 gr/h", "nominal": "20.42 gr/h", "pdf": "Ficha Técnica SP5.pdf",
+        "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
+        {"min": 20, "max": 45, "modelo": "SP-5 30", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "60 gr/h", "nominal": "31.65 gr/h", "pdf": "Ficha Técnica SP18.pdf",
+        "imagen": "https://i.imgur.com/gpKw594.jpg"},
+        {"min": 20, "max": 45, "modelo": "SP-5 45", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "60 gr/h", "nominal": "42.66 gr/h", "pdf": "Ficha Técnica SP18.pdf",
+        "imagen": "https://i.imgur.com/gpKw594.jpg"},
+        {"min": 20, "max": 45, "modelo": "SP-20 60 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "60 gr/h", "nominal": "42.66 gr/h", "pdf": "Ficha Técnica SP 20.pdf",
+        "imagen": "https://i.imgur.com/cJRniPE.jpg"},
     ]
 
     # --- Mostrar recomendaciones ---
@@ -351,7 +353,6 @@ if option == "Ozono Agua":
                             f"<p style='text-align: center;'>"
                             f"Gas de alimentación: {sistema['gas']} <br>"
                             f"Caudal Gas: {sistema['caudal']} <br>"
-                            f"Capacidad Original: {sistema['original']} <br>"
                             f"Capacidad Nominal: {sistema['nominal']}</p>",
                             unsafe_allow_html=True
                         )
