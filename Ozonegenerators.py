@@ -35,9 +35,7 @@ if not st.session_state.logueado:
         if username in USUARIOS and password == USUARIOS[username]:
             st.session_state.logueado = True
             st.markdown(f"<p style='text-align: center; color: green;'>¡Bienvenido {username}!</p>", unsafe_allow_html=True)
-            col1, col2, col3 = st.columns([3, 2, 3])
-            with col2:
-                st.button("Acceder al Buscador")
+            st.button("Acceder a Plataforma")
         else:
             st.error("Usuario o contraseña incorrectos")
 else:
