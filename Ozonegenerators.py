@@ -618,6 +618,11 @@ if option == "Ozono Aire":
                                                                       'SP 500mg','SP 1g','SP 2g','SP 4g','SP 8g','SP 10g','SP 15g','SP5 20',
                                                                       'SP5 30','SP5 45','SP5 60','SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30',
                                                                       'SP18','SP20A'), index=None)
+    
+    if optiona == 'Z1250T':
+        Qg = 518
+        Pr = 0.02
+    
     st.divider()
     col17,col18,col19 = st.columns(3)
     with col17:
