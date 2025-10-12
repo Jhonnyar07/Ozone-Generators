@@ -760,6 +760,12 @@ if option == "Ozono Aire":
         if Vei is None:
             st.error("❌ Debes introducir un volumen antes de calcular.")
             st.stop()
+        if Qg is None:
+            st.error("❌ Debes introducir un valor de caudal antes de calcular.")
+            st.stop()
+        if Pr is None:
+            st.error("❌ Debes introducir un valor de producción antes de calcular.")
+            st.stop()
         st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
         #Variables of air ozone
         c0=0
