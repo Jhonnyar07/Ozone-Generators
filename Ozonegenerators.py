@@ -713,11 +713,11 @@ if option == "Ozono Aire":
     Pr = SelectedPr
 
     if optiona != None:
-        col17,col18= st.columns(2)
-        with col17:
-            m3 = st.checkbox('Metro cúbico (m3)')
-        with col18:
-            Ltrs = st.checkbox('Litros (L)')
+        option_map ={
+            0:'Metros cúbicos (m3)',
+            1: 'Litros (L)',
+        }
+        selection = st.pills('Unidad', options=option_map.keys(),format_func=lambda option: option_map[option],selection_mode="single",)
         Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
 
     if optiona == 'Calculo sin generador asignado' and Ve != None:
