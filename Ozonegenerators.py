@@ -619,24 +619,6 @@ if option == "Ozono Aire":
                                                                       'SP5 30','SP5 45','SP5 60','SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30',
                                                                       'SP18','SP20A'), index=None)
     
-    if optiona != None:
-        Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
-    
-    if optiona == 'Calcular sin generador asignado':
-        st.divider()
-        col17,col18,col19 = st.columns(3)
-        with col17:
-            Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
-        with col18:
-            if optiona == None:
-                Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
-            else:
-                Qg = st.number_input("Caudal de salida del gas (L/min)", value = SelectedQg)
-        with col19:
-            if optiona == None:
-                Pr = st.number_input("Producción seleccionada (g/h)", value=None)
-            else:
-                Pr = st.number_input("Producción seleccionada (g/h)", value = SelectedPr)
 
     if optiona == 'Calcular sin generador asignado':
         SelectedQg=None
@@ -728,7 +710,24 @@ if option == "Ozono Aire":
     elif optiona == 'SP20A':
         SelectedPr=42.66
     
-
+    if optiona != None:
+        Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
+    
+    if optiona == 'Calcular sin generador asignado':
+        st.divider()
+        col17,col18,col19 = st.columns(3)
+        with col17:
+            Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
+        with col18:
+            if optiona == None:
+                Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
+            else:
+                Qg = st.number_input("Caudal de salida del gas (L/min)", value = SelectedQg)
+        with col19:
+            if optiona == None:
+                Pr = st.number_input("Producción seleccionada (g/h)", value=None)
+            else:
+                Pr = st.number_input("Producción seleccionada (g/h)", value = SelectedPr)
 
     col1,col2,col3 = st.columns(3)
     with col1:
