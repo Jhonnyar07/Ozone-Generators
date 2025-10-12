@@ -31,6 +31,8 @@ if not st.session_state.logueado:
     st.markdown("<h2 style='text-align: center;'>Control de Acceso</h2>", unsafe_allow_html=True)
     username = st.text_input("Usuario")
     password = st.text_input("Contraseña", type="password")
+    if username == 'franquicia' and password == 'fr4nquicia':
+        Fch = 0
     if username and password:
         if username in USUARIOS and password == USUARIOS[username]:
             st.session_state.logueado = True
@@ -40,7 +42,7 @@ if not st.session_state.logueado:
                 st.button("Acceder a Plataforma")
         else:
             st.error("Usuario o contraseña incorrectos")
-else:
+else: 
 
     st.image("https://i.imgur.com/NwOV7Ob.jpg")
 
@@ -458,12 +460,20 @@ else:
 
     #OZONE IN AIR CALCULE
     if option == "Ozono Aire":
-        optiona = st.selectbox('Seleccione el Generador:', ('Calculo sin generador asignado','Z1250T','Z3000T','Z6000T','Z10000T','Z20000T','ZHI1250','ZHI3000',
+        if Fch == 0:
+            optiona = st.selectbox('Seleccione el Generador:', ('Z1250T','Z3000T','Z6000T','Z10000T','Z20000T','ZHI1250','ZHI3000',
                                                                         'ZHI6000','ZHI10000','ZHI300MG','ZHI500MG','ZHI1000MG','Cañon 5','Cañon 12',
                                                                         'SP Mini 300mg','SP Mini 500mg','SP Mini 1g','SP Mini 2g','SP 300mg',
                                                                         'SP 500mg','SP 1g','SP 2g','SP 4g','SP 8g','SP 10g','SP 15g','SP5 20',
                                                                         'SP5 30','SP5 45','SP5 60','SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30',
                                                                         'SP18','SP20A'), index=None)
+        else:
+            optiona = st.selectbox('Seleccione el Generador:', ('Calculo sin generador asignado','Z1250T','Z3000T','Z6000T','Z10000T','Z20000T','ZHI1250','ZHI3000',
+                                                                            'ZHI6000','ZHI10000','ZHI300MG','ZHI500MG','ZHI1000MG','Cañon 5','Cañon 12',
+                                                                            'SP Mini 300mg','SP Mini 500mg','SP Mini 1g','SP Mini 2g','SP 300mg',
+                                                                            'SP 500mg','SP 1g','SP 2g','SP 4g','SP 8g','SP 10g','SP 15g','SP5 20',
+                                                                            'SP5 30','SP5 45','SP5 60','SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30',
+                                                                            'SP18','SP20A'), index=None)
         
         if optiona == 'Calculo sin generador asignado' or optiona == None:
             SelectedQg=None
