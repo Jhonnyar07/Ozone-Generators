@@ -628,12 +628,12 @@ if option == "Ozono Aire":
         if optiona == None:
             Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
         elif optiona == 'Z1250T':
-            Qg = 518
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
     with col19:
         if optiona == None:
             Pr = st.number_input("Producción seleccionada (g/h)", value=None)
         elif optiona == 'Z1250T':
-            Pr = 0.02
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.02)
     
 
     col1,col2,col3 = st.columns(3)
