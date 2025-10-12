@@ -327,10 +327,6 @@ if option == "Ozono Agua":
         "imagen": "https://i.imgur.com/OI3WF8q.jpg"},
     ]
 
-    # --- Ejemplo: valor de Pr ---
-    Pr = st.number_input("Introduce el valor de Pr", min_value=0.0, step=0.1)
-    calcule = st.button("Calcular")
-
     # --- Mostrar recomendaciones ---
     if calcule:
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
