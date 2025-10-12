@@ -149,7 +149,6 @@ if option == "Ozono Agua":
           )
     if Pump != None:
         Np = st.number_input("Cantidad de bombas (Solo en paralelo)", value=1)
-
     
     col4,col5,col6,col7 = st.columns(4)
     with col4:
@@ -265,6 +264,18 @@ if option == "Ozono Agua":
         st.divider()
     
     if calcule == True:
+        if Vr is None:
+            st.error("❌ Debes introducir un volumen antes de calcular.")
+            st.stop()
+        if Qr is None:
+            st.error("❌ Debes introducir un Caudal de Recirculación antes de calcular.")
+            st.stop()
+        if Qc is None:
+            st.error("❌ Debes introducir un Caudal de Consumo antes de calcular.")
+            st.stop()
+        if C is None:
+            st.error("❌ Debes introducir una concentración objetivo antes de calcular.")
+            st.stop()
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
             col11,col12 = st.columns(2)
