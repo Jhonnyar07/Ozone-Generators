@@ -278,6 +278,15 @@ if option == "Ozono Agua":
     if calcule == True:
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         if Pr>=0 and Pr<=2:
+            pr02_table = pd.DataFrame(
+                {
+                    'Gas de Alimentación': ['Oxigeno @90-94%'],
+                    'Caudal Gas (L/min)':[1],
+                    'Capacidad Nominal': [3.96],
+                },
+                index=['SP-24'],
+            )
+            st.table(pr02_table)
             col11,col12 = st.columns(2)
             with col11:
                 st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
