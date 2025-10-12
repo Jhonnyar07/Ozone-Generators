@@ -48,6 +48,18 @@ else:
     st.image("https://i.imgur.com/NwOV7Ob.jpg")
 
     #Selecting the calcule for Ozone gas or water
+    calcule_option = {
+        0: 'Ozono Agua',
+        1: 'Ozono Aire',
+    }
+    selection = st.pills(
+    "Tipo de instalación:",
+    options=calcule_option.keys(),
+    format_func=lambda option: calcule_option[option],
+    selection_mode="single",
+    width="content",
+    )
+
     option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Aire'), index=None)
 
     #OZONE IN WATER CALCULE
