@@ -673,6 +673,6 @@ if option == "Ozono Aire":
 
 st.write("----------------------------------------------------------------------------------------------------")
 
-st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2024 PID Medioambiental, S.L. <br> J. Aguilar & G. Balanguero <br> Rev. 1.01 </p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color:gray; font-size: 14px;'> © 2025 PID Medioambiental, S.L. <br> J. Aguilar & G. Balanguero <br> Rev. 1.03 </p>", unsafe_allow_html=True)
 
 
