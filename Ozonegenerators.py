@@ -331,7 +331,7 @@ if option == "Ozono Agua":
         "original": "3.94 gr/h", "nominal": "3.94 gr/h", "pdf": "TDS SP ES TTO Biocida 2024 (4g).pdf",
         "imagen": ""},       
         {"min": 2, "max": 4, "modelo": "SP-24", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
-        "original": "5 gr/h", "nominal": "3.96 gr/h", "pdf": "Ficha tecnica SP 24 v3.pdf",
+        "original": "5 gr/h", "nominal": "3.96 gr/h", "pdf": "TDS SP-24 ES TTO Agua Ozonizada 2024",
         "imagen": "https://i.imgur.com/mcAZEg0.jpg"},
 
         # 4 < Pr <= 7
