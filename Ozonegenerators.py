@@ -367,6 +367,7 @@ if option == "Ozono Agua":
                                 mime="application/pdf",
                                 use_container_width=True
                             )
+                            
                 
     st.divider()
     st.markdown("<h3 style='text-align: center;'>Curvas de desinfección del Agua: Concentración vs. Redox", unsafe_allow_html=True)
