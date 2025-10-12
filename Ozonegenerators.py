@@ -406,7 +406,7 @@ if option == "Ozono Agua":
                             st.download_button(
                                 label="Ficha Técnica",
                                 data=file,
-                                mime="application/pdf",
+                                file_name=sistema["pdf"],
                                 use_container_width=True
                             )
                             
