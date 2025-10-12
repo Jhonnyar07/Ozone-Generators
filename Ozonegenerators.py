@@ -335,6 +335,12 @@ if option == "Ozono Agua":
         "imagen": "https://i.imgur.com/mcAZEg0.jpg"},
 
         # 4 < Pr <= 7
+        {"min": 4, "max": 7, "modelo": "SP 8g", "gas": "Aire", "caudal": "30 L/min",
+        "original": "4.62 gr/h", "nominal": "4.62 gr/h", "pdf": "TDS SP ES TTO Biocida 2024 (8g).pdf",
+        "imagen": ""},
+        {"min": 4, "max": 7, "modelo": "SP 10g", "gas": "Aire", "caudal": "30 L/min",
+        "original": "6.38 gr/h", "nominal": "6.38 gr/h", "pdf": "TDS SP ES TTO Biocida 2024 (10g).pdf",
+        "imagen": ""},
         {"min": 4, "max": 7, "modelo": "SP-21 20", "gas": "Oxígeno @90-94%", "caudal": "1.5 L/min",
         "original": "20 gr/h", "nominal": "6.63 gr/h", "pdf": "Ficha Técnica SP21.pdf",
         "imagen": "https://i.imgur.com/jVRU4mY.jpg"},        
