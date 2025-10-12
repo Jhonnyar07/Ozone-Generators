@@ -612,7 +612,7 @@ if option == "Ozono Agua":
 
 #OZONE IN AIR CALCULE
 if option == "Ozono Aire":
-    optiona = st.selectbox('Seleccione el Generador a implementar:', ('Z1250T','Z3000T','Z6000T','Z10000T','Z20000T','ZHI1250','ZHI3000',
+    optiona = st.selectbox('Seleccione el Generador a implementar:', ('Calculo sin generador asignado','Z1250T','Z3000T','Z6000T','Z10000T','Z20000T','ZHI1250','ZHI3000',
                                                                       'ZHI6000','ZHI10000','ZHI300MG','ZHI500MG','ZHI1000MG','Cañon 5','Cañon 12',
                                                                       'SP Mini 300mg','SP Mini 500mg','SP Mini 1g','SP Mini 2g','SP 300mg',
                                                                       'SP 500mg','SP 1g','SP 2g','SP 4g','SP 8g','SP 10g','SP 15g','SP5 20',
@@ -709,23 +709,29 @@ if option == "Ozono Aire":
     elif optiona == 'SP20A':
         SelectedPr=42.66
     
+    Qg = SelectedQg
+    Pr = SelectedPr
 
-
-    st.divider()
-    col17,col18,col19 = st.columns(3)
-    with col17:
+    if optiona != None:
         Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
-    with col18:
-        if optiona == None:
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
-        else:
-            Qg = st.number_input("Caudal de salida del gas (L/min)", value= SelectedQg)
 
-    with col19:
-        if optiona == None:
-            Pr = st.number_input("Producción seleccionada (g/h)", value=None)
-        else:
-            Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
+    if optiona == 'Calculo sin generador asignado' and Ve != None:
+        st.divider()
+        col17,col18,col19 = st.columns(3)
+        with col17:
+            Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
+        with col18:
+            if optiona == None:
+                Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
+            else:
+                Qg = st.number_input("Caudal de salida del gas (L/min)", value= SelectedQg)
+
+        with col19:
+            if optiona == None:
+                Pr = st.number_input("Producción seleccionada (g/h)", value=None)
+            else:
+                Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
+
     
 
     col1,col2,col3 = st.columns(3)
