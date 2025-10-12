@@ -259,7 +259,7 @@ else:
                 st.markdown("<p style='text-align: center;'>Elementos Contaminantes (gr/h)</p>", unsafe_allow_html=True)
                 st.markdown("<p style='text-align: center;'>{}</p>".format(str(Cm)), unsafe_allow_html=True)            
 
-        calcule = st.button(":calculator: Calcular",use_container_width=True)
+        calcule = st.button("Calcular",use_container_width=True)
         
         #Parameters Calcule
         if optionw == 'Agua Potable' and calcule == True:
@@ -637,7 +637,7 @@ else:
         with col3:
             fi = st.slider("Factor de Intercambio", min_value=0.5, max_value=1.2, value=0.8)
             
-        calcule = st.button(":calculator: Calcular",use_container_width=True)
+        calcule = st.button("Calcular",use_container_width=True)
 
         if calcule == True:
             if airUnitSelection is None:
