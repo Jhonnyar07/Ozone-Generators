@@ -374,42 +374,89 @@ if option == "Ozono Agua":
         "imagen": "https://i.imgur.com/cJRniPE.jpg"},
     ]
 
-    # --- Mostrar recomendaciones ---
-    if calcule:
-        st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
+    # --------------------------------------------------------------------------
+# Función cacheada para leer los datos binarios de los PDFs
+# Usamos st.cache_data para asegurar que cada archivo se lea solo una vez.
+@st.cache_data(show_spinner=False)
+def get_pdf_data(filepath):
+    """Carga el contenido binario del PDF y maneja errores si el archivo no existe."""
+    try:
+        # Se asume que los archivos estan en la misma carpeta que el script.
+        with open(filepath, "rb") as file:
+            return file.read()
+    except FileNotFoundError:
+        st.error(f"Error: El archivo de ficha técnica '{filepath}' no se encontró. Asegúrese de que el archivo exista en la misma ruta que el script.")
+        # Retorna None para no intentar descargar datos nulos
+        return None
+    except Exception as e:
+        # Captura otros errores de lectura de archivos
+        st.error(f"Error al leer el archivo {filepath}: {e}")
+        return None
+# --------------------------------------------------------------------------
 
-        # Filtrar por rango
-        recomendados = [s for s in sistemas if s["min"] <= Pr <= s["max"]]
+# --- Interfaz y Variables de Entrada ---
+st.title("Calculadora de Sistemas de Ozono")
 
-        # Si no hay coincidencias y Pr > 20, mostrar nota
-        if Pr > 50:
-            st.markdown("<h4 style='text-align: center;'>NOTA: Para concentraciones mayores a 50 gr/h considere la combinación de 2 o más sistemas</h4>", unsafe_allow_html=True)
-            recomendados = [s for s in sistemas if s["max"] == 50]  # mostrar los más potentes
+# Inicializamos variables si no existen
+if 'Pr' not in st.session_state:
+    st.session_state.Pr = 15.0
+if 'calcule' not in st.session_state:
+    st.session_state.calcule = False
 
-        if not recomendados:
-            st.info("No se encontraron sistemas recomendados para este valor de Pr.")
-        else:
-            # Mostrar los sistemas en pares de columnas
-            for i in range(0, len(recomendados), 2):
-                cols = st.columns(2)
-                for col, sistema in zip(cols, recomendados[i:i+2]):
-                    with col:
-                        st.markdown(f"<h4 style='text-align: center;'>{sistema['modelo']}</h4>", unsafe_allow_html=True)
-                        st.markdown(
-                            f"<p style='text-align: center;'>"
-                            f"Gas de alimentación: {sistema['gas']} <br>"
-                            f"Caudal Gas: {sistema['caudal']} <br>"
-                            f"Capacidad Nominal: {sistema['nominal']}</p>",
-                            unsafe_allow_html=True
+Pr_input = st.slider("Valor de Pr (gr/h)", min_value=0.0, max_value=60.0, value=st.session_state.Pr, step=0.5)
+st.session_state.Pr = Pr_input # Actualizamos Pr
+st.session_state.calcule = st.button("Buscar Recomendaciones")
+
+
+# --- Lógica de Recomendaciones (Código del usuario corregido) ---
+if st.session_state.calcule:
+    Pr = st.session_state.Pr
+
+    st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
+
+    # Filtrar por rango: Usamos un rango abierto por la izquierda (> min) y cerrado por la derecha (<= max)
+    recomendados = [s for s in sistemas if s["min"] < Pr <= s["max"]]
+
+    # Manejo del caso de alta producción (Corregimos a 45, el maximo en la tabla)
+    if Pr > 45: 
+        st.markdown("<h4 style='text-align: center;'>NOTA: Para concentraciones mayores a 45 gr/h considere la combinación de 2 o más sistemas</h4>", unsafe_allow_html=True)
+        # Mostrar los más potentes, que son los que tienen maximo de 45 en la tabla
+        recomendados = [s for s in sistemas if s["max"] == 45]
+
+    if not recomendados:
+        st.info(f"No se encontraron sistemas recomendados para un valor de Pr = {Pr:.2f} gr/h.")
+    else:
+        # Mostrar los sistemas en pares de columnas
+        for i in range(0, len(recomendados), 2):
+            cols = st.columns(2)
+            for col, sistema in zip(cols, recomendados[i:i+2]):
+                with col:
+                    st.markdown(f"<h4 style='text-align: center;'>{sistema['modelo']}</h4>", unsafe_allow_html=True)
+                    st.markdown(
+                        f"<p style='text-align: center;'>"
+                        f"Gas de alimentación: {sistema['gas']} <br>"
+                        f"Caudal Gas: {sistema['caudal']} <br>"
+                        f"Capacidad Nominal: **{sistema['nominal']}**</p>",
+                        unsafe_allow_html=True
+                    )
+
+                    # --- ZONA CORREGIDA DEL ERROR ---
+                    pdf_data = get_pdf_data(sistema["pdf"]) # Llamamos a la función cacheada
+                    
+                    if pdf_data is not None:
+                        # Si los datos se leyeron correctamente, mostramos el botón
+                        st.download_button(
+                            label="Ficha Técnica",
+                            data=pdf_data, 
+                            file_name=sistema["pdf"], 
+                            mime="application/pdf",
+                            use_container_width=True
                         )
-                        with open(sistema["pdf"], "rb") as file:
-                            st.download_button(
-                                label="Ficha Técnica",
-                                data=file,
-                                file_name=sistema["pdf"],
-                                mime="application/pdf",
-                                use_container_width=True
-                            )
+                    else:
+                        # Si la función devolvió None por error de archivo, mostramos un aviso
+                        st.warning(f"No se pudo cargar el archivo: {sistema['pdf']}")
+                    # -------------------------------
+
                             
                 
     st.divider()
