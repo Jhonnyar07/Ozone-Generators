@@ -621,8 +621,24 @@ if option == "Ozono Aire":
     
     if optiona != None:
         Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
+    
+    if optiona == 'Calcular sin generador asignado' and Ve != None:
+        st.divider()
+        col17,col18 = st.columns(3)
+        with col17:
+            Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
+        with col18:
+            if optiona == None:
+                Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
+            else:
+                Qg = st.number_input("Caudal de salida del gas (L/min)", value = SelectedQg)
+        with col19:
+            if optiona == None:
+                Pr = st.number_input("Producción seleccionada (g/h)", value=None)
+            else:
+                Pr = st.number_input("Producción seleccionada (g/h)", value = SelectedPr)
 
-    if optiona == None:
+    if optiona == 'Calcular sin generador asignado':
         SelectedQg=None
     elif optiona in ['Z1250T','Z3000T','Z6000T','Z10000T','Z20000T']:
         SelectedQg=518
@@ -637,25 +653,7 @@ if option == "Ozono Aire":
     elif optiona in ['SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30']:
         SelectedQg=1.5
 
-
-    if optiona == 'Calcular sin generador asignado' and Ve != None:
-        st.divider()
-        col17,col18 = st.columns(3)
-        with col17:
-            Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
-        with col18:
-            if optiona == None:
-                Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
-            else:
-                Qg = st.number_input("Caudal de salida del gas (L/min)", value = SelectedQg)
-
-        with col19:
-            if optiona == None:
-                Pr = st.number_input("Producción seleccionada (g/h)", value=None)
-            else:
-                Pr = st.number_input("Producción seleccionada (g/h)", value = SelectedPr)
-
-    if optiona == None:
+    if optiona == 'Calcular sin generador asignado':
         SelectedPr=None
     elif optiona == 'Z1250T':
         SelectedPr=0.02
@@ -731,9 +729,6 @@ if option == "Ozono Aire":
         SelectedPr=42.66
     
 
-
-
-    
 
     col1,col2,col3 = st.columns(3)
     with col1:
