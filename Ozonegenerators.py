@@ -402,7 +402,14 @@ if option == "Ozono Agua":
                             f"Capacidad Nominal: {sistema['nominal']}</p>",
                             unsafe_allow_html=True
                         )
-
+                        with open(sistema["pdf"], "rb") as file:
+                            st.download_button(
+                                label="Ficha Técnica",
+                                data=file,
+                                file_name=sistema["pdf"],
+                                mime="Doc/pdf",
+                                use_container_width=True
+                            )
                             
                 
     st.divider()
