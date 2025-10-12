@@ -612,6 +612,12 @@ if option == "Ozono Agua":
 
 #OZONE IN AIR CALCULE
 if option == "Ozono Aire":
+    optiona = st.selectbox('Seleccione el Generador a implementar:', ('Z1250T','Z3000T','Z6000T','Z10000T','Z20000T','ZHI1250','ZHI3000',
+                                                                      'ZHI6000','ZHI10000','ZHI300MG','ZHI500MG','ZHI1000MG','Cañon 5','Cañon 12',
+                                                                      'SP Mini 300mg','SP Mini 500mg','SP Mini 1g','SP Mini 2g','SP 300mg',
+                                                                      'SP 500mg','SP 1g','SP 2g','SP 4g','SP 8g','SP 10g','SP 15g','SP5 20',
+                                                                      'SP5 30','SP5 45','SP5 60','SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30',
+                                                                      'SP18','SP20A'), index=None)
     st.divider()
     col17,col18,col19 = st.columns(3)
     with col17:
