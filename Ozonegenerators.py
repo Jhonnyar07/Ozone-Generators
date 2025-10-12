@@ -52,7 +52,7 @@ else:
         0: 'Ozono Agua',
         1: 'Ozono Aire',
     }
-    selection = st.pills(
+    option = st.pills(
     "Tipo de instalación:",
     options=calcule_option.keys(),
     format_func=lambda option: calcule_option[option],
@@ -60,10 +60,8 @@ else:
     width="stretch",
     )
 
-    option=st.selectbox('Tipo de instalación:', ('Ozono Agua','Ozono Aire'), index=None)
-
     #OZONE IN WATER CALCULE
-    if option == "Ozono Agua":
+    if option == 0:
         optionw=st.selectbox('Tipo de instalación:', ('Agua Potable','Aguas Residuales'), index=None)
 
         st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
@@ -488,7 +486,7 @@ else:
 
 
     #OZONE IN AIR CALCULE
-    if option == "Ozono Aire":
+    if option == 1:
         if st.session_state.franchise:
             optiona = st.selectbox('Seleccione el Generador:', ('Z1250T','Z3000T','Z6000T','Z10000T','Z20000T','ZHI1250','ZHI3000',
                                                                         'ZHI6000','ZHI10000','ZHI300MG','ZHI500MG','ZHI1000MG','Cañon 5','Cañon 12',
