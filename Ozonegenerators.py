@@ -280,10 +280,10 @@ if option == "Ozono Agua":
         sistemas = [
         # Pr <= 2
         {"min": 0, "max": 2, "modelo": "ZHI1250", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.01 gr/h", "nominal": "0.01 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
+        "original": "0.01 gr/h", "nominal": "0.01 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (1250).pdf",
         "imagen": ""},     
         {"min": 0, "max": 2, "modelo": "ZHI3000", "gas": "Aire", "caudal": "8 L/min",
-        "original": "0.03 gr/h", "nominal": "0.03 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
+        "original": "0.03 gr/h", "nominal": "0.03 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024 (3000).pdf",
         "imagen": ""},        
         {"min": 0, "max": 2, "modelo": "ZHI6000", "gas": "Aire", "caudal": "8 L/min",
         "original": "0.06 gr/h", "nominal": "0.06 gr/h", "pdf": "TDS Z-ZHI ES TTO Biocida 2024.pdf",
