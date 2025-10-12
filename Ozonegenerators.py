@@ -25,7 +25,7 @@ if option == "Ozono Agua":
     optionw=st.selectbox('Tipo de instalación:', ('Agua Potable','Aguas Residuales'), index=None)
 
     st.markdown("<h3 style='text-align: center;'>Parámetros de diseño</h3>", unsafe_allow_html=True)
-    Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 10-1', 'CM 10-2', 'MATRIX/A 5-6T'), index=None)
+    Pump=st.selectbox('Bomba de recirculación:', ('CM 3-5', 'CM 5-7', 'CM 10-1', 'CM 10-2', 'MATRIX/A 5-6T'), index=None)
     if Pump == 'CM 3-5':
         Co1= 500
         V1= 2740
