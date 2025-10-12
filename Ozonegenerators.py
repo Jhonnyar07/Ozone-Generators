@@ -619,7 +619,7 @@ if option == "Ozono Aire":
                                                                       'SP5 30','SP5 45','SP5 60','SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30',
                                                                       'SP18','SP20A'), index=None)
     
-    if optiona == None or 'Calculo sin generador asignado':
+    if optiona == 'Calculo sin generador asignado' or optiona == None:
         SelectedQg=None
     elif optiona in ['Z1250T','Z3000T','Z6000T','Z10000T','Z20000T']:
         SelectedQg=518
@@ -634,7 +634,7 @@ if option == "Ozono Aire":
     elif optiona in ['SP21 20','SP21 40','SP5 Oxi 20','SP5 Oxi 30']:
         SelectedQg=1.5
 
-    if optiona == None or 'Calculo sin generador asignado':
+    if optiona == 'Calculo sin generador asignado' or optiona == None:
         SelectedPr=None
     elif optiona == 'Z1250T':
         SelectedPr=0.02
