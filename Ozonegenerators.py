@@ -638,16 +638,18 @@ if option == "Ozono Aire":
         SelectedQg=1.5
 
 
-    if Ve != None and optiona == 'Calcular sin generador asignado':
+    if optiona == 'Calcular sin generador asignado' and Ve != None:
         st.divider()
-        col17,col18 = st.columns(2)
+        col17,col18 = st.columns(3)
         with col17:
+            Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
+        with col18:
             if optiona == None:
                 Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
             else:
                 Qg = st.number_input("Caudal de salida del gas (L/min)", value = SelectedQg)
 
-        with col18:
+        with col19:
             if optiona == None:
                 Pr = st.number_input("Producción seleccionada (g/h)", value=None)
             else:
