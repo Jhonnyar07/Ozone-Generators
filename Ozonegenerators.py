@@ -624,7 +624,7 @@ if option == "Ozono Aire":
     
     if optiona == 'Calcular sin generador asignado':
         st.divider()
-        col17,col18 = st.columns(3)
+        col17,col18,col19 = st.columns(3)
         with col17:
             Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
         with col18:
