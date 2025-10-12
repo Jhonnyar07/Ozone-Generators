@@ -719,7 +719,7 @@ if option == "Ozono Aire":
         st.divider()
         col17,col18,col19 = st.columns(3)
         with col17:
-            Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
+            Ve
         with col18:
             if optiona == None:
                 Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
