@@ -720,9 +720,9 @@ if option == "Ozono Aire":
         selection = st.pills('Unidad', options=option_map.keys(),format_func=lambda option: option_map[option],selection_mode="single",)
         Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
 
-    if selection == 'Metros cúbicos (m3)' and optiona != None:
+    if selection == ['Metros cúbicos (m3)'] and optiona != None:
         Ve = Ve*1000
-    elif selection == 'Litros (L)' and optiona != None:
+    elif selection == ['Litros (L)'] and optiona != None:
         Ve = Ve
 
     if optiona == 'Calculo sin generador asignado' and Ve != None:
