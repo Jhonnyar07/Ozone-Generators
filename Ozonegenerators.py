@@ -629,11 +629,152 @@ if option == "Ozono Aire":
             Qg = st.number_input("Caudal de salida del gas (L/min)", value=None)
         elif optiona == 'Z1250T':
             Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
+        elif optiona == 'Z3000T':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
+        elif optiona == 'Z6000T':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
+        elif optiona == 'Z10000T':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
+        elif optiona == 'Z20000T':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=518)
+        elif optiona == 'ZHI1250':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'ZHI3000':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)        
+        elif optiona == 'ZHI6000':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'ZHI10000':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'ZHI300MG':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'ZHI500MG':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'ZHI1000MG':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'Cañon 5':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=3333)
+        elif optiona == 'Cañon 12':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=3333)
+        elif optiona == 'SP Mini 300mg':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'SP Mini 500mg':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'SP Mini 1g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'SP Mini 2g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=8)
+        elif optiona == 'SP 300mg':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP 500mg':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP 1g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP 2g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP 4g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP 8g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP 10g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP 15g':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=30)
+        elif optiona == 'SP5 20':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
+        elif optiona == 'SP5 30':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
+        elif optiona == 'SP5 45':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
+        elif optiona == 'SP5 60':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
+        elif optiona == 'SP21 20':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
+        elif optiona == 'SP21 40':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
+        elif optiona == 'SP5 Oxi 20':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
+        elif optiona == 'SP5 Oxi 30':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=1.5)
+        elif optiona == 'SP18':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=10)
+        elif optiona == 'SP20A':
+            Qg = st.number_input("Caudal de salida del gas (L/min)", value=510)
+
     with col19:
         if optiona == None:
             Pr = st.number_input("Producción seleccionada (g/h)", value=None)
         elif optiona == 'Z1250T':
             Pr = st.number_input("Producción seleccionada (g/h)", value=0.02)
+        elif optiona == 'Z3000T':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.03)
+        elif optiona == 'Z6000T':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.07)
+        elif optiona == 'Z10000T':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.08)
+        elif optiona == 'Z20000T':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.10)
+        elif optiona == 'ZHI1250':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.01)
+        elif optiona == 'ZHI3000':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.03)
+        elif optiona == 'ZHI6000':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.06)
+        elif optiona == 'ZHI10000':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.08)
+        elif optiona == 'ZHI300MG':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.29)
+        elif optiona == 'ZHI500MG':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.32)
+        elif optiona == 'ZHI1000MG':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.57)
+        elif optiona == 'Cañon 5':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=4)
+        elif optiona == 'Cañon 12':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=10.60)
+        elif optiona == 'SP Mini 300mg':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.29)
+        elif optiona == 'SP Mini 500mg':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.32)
+        elif optiona == 'SP Mini 1g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.57)
+        elif optiona == 'SP Mini 2g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.94)
+        elif optiona == 'SP 300mg':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.27)
+        elif optiona == 'SP 500mg':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.34)
+        elif optiona == 'SP 1g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=0.41)
+        elif optiona == 'SP 2g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=3.24)
+        elif optiona == 'SP 4g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=3.94)
+        elif optiona == 'SP 8g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=4.62)
+        elif optiona == 'SP 10g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=6.38)
+        elif optiona == 'SP 15g':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=4.48)
+        elif optiona == 'SP5 20':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=20.42)
+        elif optiona == 'SP5 30':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=31.65)
+        elif optiona == 'SP5 45':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=42.66)
+        elif optiona == 'SP5 60':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=42.66)
+        elif optiona == 'SP21 20':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=6.63)
+        elif optiona == 'SP21 40':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=8.49)
+        elif optiona == 'SP5 Oxi 20':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=6.63)
+        elif optiona == 'SP5 Oxi 30':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=8.49)
+        elif optiona == 'SP18':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=42.66)
+        elif optiona == 'SP20A':
+            Pr = st.number_input("Producción seleccionada (g/h)", value=42.66)
     
 
     col1,col2,col3 = st.columns(3)
