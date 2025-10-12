@@ -47,13 +47,14 @@ else:
 
     st.image("https://i.imgur.com/NwOV7Ob.jpg")
 
+    st.markdown("<h3 style='text-align: center;'>Cálculo de Sistemas de Ozono</h3>", unsafe_allow_html=True)
+
     #Selecting the calcule for Ozone gas or water
     calcule_option = {
         0: ':droplet: Ozono Agua',
         1: ':dash: Ozono Aire',
     }
     option = st.pills(
-    "Tipo de instalación:",
     options=calcule_option.keys(),
     format_func=lambda option: calcule_option[option],
     selection_mode="single",
