@@ -713,6 +713,7 @@ if option == "Ozono Aire":
     Pr = SelectedPr
 
     if optiona != None:
+        st.selectbox('Unidad',('Metro Cúbico (m3)','Litros (L)'))
         Ve = st.number_input("Volumen del espacio a tratar (L)", value=None)
 
     if optiona == 'Calculo sin generador asignado' and Ve != None:
