@@ -276,7 +276,6 @@ if option == "Ozono Agua":
         st.divider()
     
     if calcule == True:
-        st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
         # --- Tabla con todos los sistemas y sus rangos ---
         sistemas = [
         # Pr <= 2
