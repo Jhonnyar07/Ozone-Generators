@@ -739,10 +739,6 @@ if option == "Ozono Aire":
             else:
                 Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
 
-    if Vei is None:
-        st.error("❌ Debes introducir un volumen antes de calcular.")
-        st.stop()
-
     col1,col2,col3 = st.columns(3)
     with col1:
         st.markdown("<p style='text-align: center;'>Concentración (g/m3)</p>", unsafe_allow_html=True)
@@ -761,6 +757,9 @@ if option == "Ozono Aire":
     calcule = st.button("Calcular",use_container_width=True)
 
     if calcule == True:
+        if Vei is None:
+            st.error("❌ Debes introducir un volumen antes de calcular.")
+            st.stop()
         st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
         #Variables of air ozone
         c0=0
