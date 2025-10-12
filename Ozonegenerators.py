@@ -277,380 +277,98 @@ if option == "Ozono Agua":
     
     if calcule == True:
         st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
-        if Pr>=0 and Pr<=2:
-            pr02_table = pd.DataFrame(
-                {
-                    'Gas de Alimentación': ['Oxigeno @90-94%'],
-                    'Caudal Gas (L/min)':[1],
-                    'Capacidad Nominal': [3.96],
-                },
-                index=['SP-24'],
-            )
-            st.table(pr02_table)
-            col11,col12 = st.columns(2)
-            with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-24</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 5 gr/h <br> Capacidad Nominal: 2.8 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha tecnica SP 24 v3.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha tecnica SP 24 v3.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )
-            with col12:
-                st.image('https://i.imgur.com/mcAZEg0.jpg')
+        # --- Tabla con todos los sistemas y sus rangos ---
+        sistemas = [
+        # Pr <= 2
+        {"min": 0, "max": 2, "modelo": "SP-24", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
+        "original": "5 gr/h", "nominal": "2.8 gr/h", "pdf": "Ficha tecnica SP 24 v3.pdf",
+        "imagen": "https://i.imgur.com/mcAZEg0.jpg"},
 
-        if Pr>2 and Pr<=4:
-            col11,col12 = st.columns(2)
-            with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-5 20 Oxi</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original:  gr/h <br> Capacidad Nominal: 4.5 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5 oxi.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP5 oxi.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col12:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
+        # 2 < Pr <= 4
+        {"min": 2, "max": 4, "modelo": "SP-5 20 Oxi", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
+        "original": "—", "nominal": "4.5 gr/h", "pdf": "Ficha Técnica SP5 oxi.pdf",
+        "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
 
-        if Pr>4 and Pr<=7:
-            col11,col12 = st.columns(2)
-            with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-5 30 Oxi</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 1 L/min <br> Capacidad Original: 30 gr/h <br> Capacidad Nominal: 6.4 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5 oxi.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP5 oxi.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col12:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
+        # 4 < Pr <= 7
+        {"min": 4, "max": 7, "modelo": "SP-5 30 Oxi", "gas": "Oxígeno @90-94%", "caudal": "1 L/min",
+        "original": "30 gr/h", "nominal": "6.4 gr/h", "pdf": "Ficha Técnica SP5 oxi.pdf",
+        "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
 
-        if Pr>7 and Pr<=12:
-            col13,col14 = st.columns(2)
-            with col13:
-                st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP5.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col14:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
+        # 7 < Pr <= 12
+        {"min": 7, "max": 12, "modelo": "SP-5 20 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "20 gr/h", "nominal": "20 gr/h", "pdf": "Ficha Técnica SP5.pdf",
+        "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
+        {"min": 7, "max": 12, "modelo": "SP-18", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "60 gr/h", "nominal": "23.22 gr/h", "pdf": "Ficha Técnica SP18.pdf",
+        "imagen": "https://i.imgur.com/gpKw594.jpg"},
+        {"min": 7, "max": 12, "modelo": "SP-20 60 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "60 gr/h", "nominal": "23.22 gr/h", "pdf": "Ficha Técnica SP 20.pdf",
+        "imagen": "https://i.imgur.com/cJRniPE.jpg"},
+        {"min": 7, "max": 12, "modelo": "SP-21 20 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "20 gr/h", "nominal": "20 gr/h", "pdf": "Ficha Técnica SP21.pdf",
+        "imagen": "https://i.imgur.com/jVRU4mY.jpg"},
 
-            col13,col14 = st.columns(2)
-            with col13:
-                st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP560g.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col14:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
+        # 12 < Pr <= 20
+        {"min": 12, "max": 20, "modelo": "SP-20 80 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "80 gr/h", "nominal": "25 gr/h", "pdf": "Ficha Técnica SP 20.pdf",
+        "imagen": "https://i.imgur.com/cJRniPE.jpg"},
+        {"min": 12, "max": 20, "modelo": "SP-21 40 gr", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "40 gr/h", "nominal": "28 gr/h", "pdf": "Ficha Técnica SP21.pdf",
+        "imagen": "https://i.imgur.com/jVRU4mY.jpg"},
+        {"min": 12, "max": 20, "modelo": "SP-22", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "40 gr/h", "nominal": "28 gr/h", "pdf": "Ficha Técnica SP22.pdf",
+        "imagen": "https://i.imgur.com/fA7a6Sn.jpg"},
+        {"min": 12, "max": 20, "modelo": "SP-23", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "80 gr/h", "nominal": "25 gr/h",
+        "pdf": "Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf",
+        "imagen": "https://i.imgur.com/6zK69Kq.jpg"},
+        {"min": 12, "max": 20, "modelo": "SP-25", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
+        "original": "40 gr/h", "nominal": "28 gr/h", "pdf": "Ficha tecnica SP 25.pdf",
+        "imagen": "https://i.imgur.com/OI3WF8q.jpg"},
+    ]
 
-            col20,col21 = st.columns(2)
-            with col20:
-                st.markdown("<h4 style='text-align: center;'>SP-18</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP18.pdf", "rb") as file:
-                    btn5 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP18.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col21:
-                st.image('https://i.imgur.com/gpKw594.jpg')
+    # --- Ejemplo: valor de Pr ---
+    Pr = st.number_input("Introduce el valor de Pr", min_value=0.0, step=0.1)
+    calcule = st.button("Calcular")
 
-            col22,col23 = st.columns(2)
-            with col22:
-                st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP 20.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col23:
-                st.image('https://i.imgur.com/cJRniPE.jpg')
+    # --- Mostrar recomendaciones ---
+    if calcule:
+        st.markdown("<h3 style='text-align: center;'>Sistemas Recomendados</h3>", unsafe_allow_html=True)
 
-            col11,col12 = st.columns(2)
-            with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-21 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP21.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP21.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col12:
-                st.image('https://i.imgur.com/jVRU4mY.jpg')
+        # Filtrar por rango
+        recomendados = [s for s in sistemas if s["min"] <= Pr <= s["max"]]
 
-        if Pr>12 and Pr<=20:
-            col11,col12 = st.columns(2)
-            with col11:
-                st.markdown("<h4 style='text-align: center;'>SP-5 20 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 20 gr/h <br> Capacidad Nominal: 20 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP5.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col12:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
-            col13,col14 = st.columns(2)
-            with col13:
-                st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP560g.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col14:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
-           
-            col20,col21 = st.columns(2)
-            with col20:
-                st.markdown("<h4 style='text-align: center;'>SP-18</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP18.pdf", "rb") as file:
-                    btn5 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP18.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col21:
-                st.image('https://i.imgur.com/gpKw594.jpg')
+        # Si no hay coincidencias y Pr > 20, mostrar nota
+        if Pr > 20:
+            st.markdown("<h4 style='text-align: center;'>NOTA: Para concentraciones mayores a 28 gr/h considere la combinación de 2 o más sistemas</h4>", unsafe_allow_html=True)
+            recomendados = [s for s in sistemas if s["max"] == 20]  # mostrar los más potentes
 
-            col22,col23 = st.columns(2)
-            with col22:
-                st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP 20.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col23:
-                st.image('https://i.imgur.com/cJRniPE.jpg')
-
-            col22,col23 = st.columns(2)
-            with col22:
-                st.markdown("<h4 style='text-align: center;'>SP-20 80 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP 2080gr.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col23:
-                st.image('https://i.imgur.com/cJRniPE.jpg')
-
-            col17,col18 = st.columns(2)
-            with col17:
-                st.markdown("<h4 style='text-align: center;'>SP-21 40 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP21.pdf", "rb") as file:
-                    btn4 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP21.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col18:
-                st.image('https://i.imgur.com/jVRU4mY.jpg')
-
-            col19,col20 = st.columns(2)
-            with col19:
-                st.markdown("<h4 style='text-align: center;'>SP-22</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP22.pdf", "rb") as file:
-                    btn5 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP22.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col20:
-                st.image('https://i.imgur.com/fA7a6Sn.jpg')
-            
-            col15,col16 = st.columns(2)
-            with col15:
-                st.markdown("<h4 style='text-align: center;'>SP-23</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf", "rb") as file:
-                    btn3 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col16:
-                st.image('https://i.imgur.com/6zK69Kq.jpg')
-                     
-            col24,col25 = st.columns(2)
-            with col24:
-                st.markdown("<h4 style='text-align: center;'>SP-25</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha tecnica SP 25.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha tecnica SP 25.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col25:
-                st.image('https://i.imgur.com/OI3WF8q.jpg')
-
-        if Pr>20:
-            st.markdown("<h4 style='text-align: center;'>NOTA: Para concentraciones mayores a 28 gr/h considere la combinación de 2 o mas sistemas</h4>", unsafe_allow_html=True)
-            col13,col14 = st.columns(2)
-            with col13:
-                st.markdown("<h4 style='text-align: center;'>SP-5 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP5.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP560g.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col14:
-                st.image('https://i.imgur.com/j4Ujngv.jpg')
-
-            col20,col21 = st.columns(2)
-            with col20:
-                st.markdown("<h4 style='text-align: center;'>SP-18</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP18.pdf", "rb") as file:
-                    btn5 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP18.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col21:
-                st.image('https://i.imgur.com/gpKw594.jpg')
-
-            col22,col23 = st.columns(2)
-            with col22:
-                st.markdown("<h4 style='text-align: center;'>SP-20 60 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 60 gr/h <br> Capacidad Nominal: 23.22 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn1 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP 20.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col23:
-                st.image('https://i.imgur.com/cJRniPE.jpg')
-
-            col22,col23 = st.columns(2)
-            with col22:
-                st.markdown("<h4 style='text-align: center;'>SP-20 80 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP 20.pdf", "rb") as file:
-                    btn2 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP 2080gr.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col23:
-                st.image('https://i.imgur.com/cJRniPE.jpg')
-
-            col17,col18 = st.columns(2)
-            with col17:
-                st.markdown("<h4 style='text-align: center;'>SP-21 40 gr</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP21.pdf", "rb") as file:
-                    btn4 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP21.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col18:
-                st.image('https://i.imgur.com/jVRU4mY.jpg')
-
-            col19,col20 = st.columns(2)
-            with col19:
-                st.markdown("<h4 style='text-align: center;'>SP-22</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 40 gr/h <br> Capacidad Nominal: 28 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha Técnica SP22.pdf", "rb") as file:
-                    btn5 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha Técnica SP22.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col20:
-                st.image('https://i.imgur.com/fA7a6Sn.jpg')
-
-            col15,col16 = st.columns(2)
-            with col15:
-                st.markdown("<h4 style='text-align: center;'>SP-23</h4>", unsafe_allow_html=True)
-                st.markdown("<p style='text-align: center;'>Gas de alimentación: Oxigeno @90-94% <br> Caudal Gas: 10 L/min <br> Capacidad Original: 80 gr/h <br> Capacidad Nominal: 25 gr/h </p>", unsafe_allow_html=True)
-                with open("Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf", "rb") as file:
-                    btn3 = st.download_button(
-                    label="Ficha Técnica",
-                    data=file,
-                    file_name="Ficha tecnica SP 23 Clientes Rev 3 Industrial sanidad.pdf",
-                    mime="Doc/pdf",
-                    use_container_width=True
-                    )        
-            with col16:
-                st.image('https://i.imgur.com/6zK69Kq.jpg')
+        if not recomendados:
+            st.info("No se encontraron sistemas recomendados para este valor de Pr.")
+        else:
+            # Mostrar los sistemas en pares de columnas
+            for i in range(0, len(recomendados), 2):
+                cols = st.columns(2)
+                for col, sistema in zip(cols, recomendados[i:i+2]):
+                    with col:
+                        st.markdown(f"<h4 style='text-align: center;'>{sistema['modelo']}</h4>", unsafe_allow_html=True)
+                        st.markdown(
+                            f"<p style='text-align: center;'>"
+                            f"Gas de alimentación: {sistema['gas']} <br>"
+                            f"Caudal Gas: {sistema['caudal']} <br>"
+                            f"Capacidad Original: {sistema['original']} <br>"
+                            f"Capacidad Nominal: {sistema['nominal']}</p>",
+                            unsafe_allow_html=True
+                        )
+                        with open(sistema["pdf"], "rb") as file:
+                            st.download_button(
+                                label="Ficha Técnica",
+                                data=file,
+                                file_name=sistema["pdf"],
+                                mime="application/pdf",
+                                use_container_width=True
+                            )
+                        st.image(sistema["imagen"])
                 
     st.divider()
     st.markdown("<h3 style='text-align: center;'>Curvas de desinfección del Agua: Concentración vs. Redox", unsafe_allow_html=True)
