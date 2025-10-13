@@ -264,6 +264,9 @@ else:
         
         #Parameters Calcule
         if optionw == 'Agua Potable' and calcule == True:
+            if optionw is None:
+                st.error("❌ Seleccione el tipo de instalación.")
+                st.stop()                
             if Vr is None:
                 st.error("❌ Debes introducir un volumen antes de calcular.")
                 st.stop()
