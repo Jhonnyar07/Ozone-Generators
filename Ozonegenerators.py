@@ -263,10 +263,10 @@ else:
         calcule = st.button("Calcular",use_container_width=True)
         
         #Parameters Calcule
-        if optionw == 'Agua Potable' and calcule == True:
+        if calcule == True:
             if optionw is None:
                 st.error("❌ Seleccione el tipo de instalación.")
-                st.stop()                
+                st.stop()      
             if Vr is None:
                 st.error("❌ Debes introducir un volumen antes de calcular.")
                 st.stop()
@@ -278,7 +278,8 @@ else:
                 st.stop()
             if C is None:
                 st.error("❌ Debes introducir una concentración objetivo antes de calcular.")
-                st.stop()
+                st.stop()     
+        if optionw == 'Agua Potable' and calcule == True:
             st.divider()
             st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
             col8,col9,col10 = st.columns(3)
