@@ -606,11 +606,11 @@ else:
                 with col19:
                     if optiona != None and optiona != 'Calculo sin generador asignado':
                         Qg = SelectedQg
-                        st.markdown(f"Caudal de salida del gas: {Qg} L/min", width='content')
+                        st.text(f"Caudal de salida del gas: {Qg} L/min", width='stretch')
                 with col20:
                     if optiona != None and optiona != 'Calculo sin generador asignado':
                         Pr = SelectedPr
-                        st.markdown(f"Producción seleccionada: {Pr} gr/h", width='content')
+                        st.text(f"Producción seleccionada: {Pr} gr/h", width='stretch')
 
         if optiona != None:
             Vei = st.number_input("Volumen del espacio a tratar", value=None)
