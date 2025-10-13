@@ -623,6 +623,17 @@ else:
                 else:
                     Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
 
+        if st.session_state.franchise:
+            if optiona != 'Calculo sin generador asignado' and Vei != None:
+                st.divider()
+                col19,col20= st.columns(2)
+                with col19:
+                    if optiona != None:
+                        Qg = st.number_input("Caudal de salida del gas (L/min)", value=SelectedQg)
+                with col20:
+                    if optiona != None:
+                        Pr = st.number_input("Producción seleccionada (g/h)", value=SelectedPr)
+
         col1,col2,col3 = st.columns(3)
         with col1:
             st.markdown("<p style='text-align: center;'>Concentración (g/m3)</p>", unsafe_allow_html=True)
