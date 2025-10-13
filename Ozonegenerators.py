@@ -610,7 +610,7 @@ else:
                         st.markdown("<p style='text-align: center;'>{}</p>".format(str(Qg)), unsafe_allow_html=True)
                 with col20:
                     if optiona != None and optiona != 'Calculo sin generador asignado':
-                        st.markdown("<p style='text-align: center;'>Producción Seleccionada (gr/h)</p>", unsafe_allow_html=True)
+                        st.markdown("<p style='text-align: center;'>Producción del Sistema (gr/h)</p>", unsafe_allow_html=True)
                         Pr = SelectedPr
                         st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pr)), unsafe_allow_html=True)
 
