@@ -605,12 +605,14 @@ else:
                 col19,col20= st.columns(2)
                 with col19:
                     if optiona != None and optiona != 'Calculo sin generador asignado':
+                        st.markdown("<p style='text-align: center;'>Caudal de Salida del Gas (L/min)</p>", unsafe_allow_html=True)
                         Qg = SelectedQg
-                        st.markdown(f"Caudal de salida del gas: **{Qg} L/min**", width='stretch')
+                        st.markdown("<p style='text-align: center;'>{}</p>".format(str(Qg)), unsafe_allow_html=True)
                 with col20:
                     if optiona != None and optiona != 'Calculo sin generador asignado':
+                        st.markdown("<p style='text-align: center;'>Producción Seleccionada (gr/h)</p>", unsafe_allow_html=True)
                         Pr = SelectedPr
-                        st.markdown(f"Producción seleccionada: **{Pr} gr/h**", width='stretch')
+                        st.markdown("<p style='text-align: center;'>{}</p>".format(str(Pr)), unsafe_allow_html=True)
 
         if optiona != None:
             Vei = st.number_input("Volumen del espacio a tratar", value=None)
