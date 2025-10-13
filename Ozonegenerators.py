@@ -34,6 +34,8 @@ if not st.session_state.logueado:
     password = st.text_input("Contraseña", type="password")
     if username == 'franquicia' and password == 'fr4nquicia':
         st.session_state.franchise = True
+    if username in ['asp','Asp'] and password in ['asepsia']:
+        st.session_state.asp = True
     if username and password:
         if username in USUARIOS and password == USUARIOS[username]:
             st.session_state.logueado = True
@@ -623,7 +625,7 @@ else:
                 else:
                     Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
 
-        if st.session_state.franchise == False:
+        if st.session_state.asp:
             if optiona != 'Calculo sin generador asignado' and Vei != None:
                 st.divider()
                 col19,col20= st.columns(2)
