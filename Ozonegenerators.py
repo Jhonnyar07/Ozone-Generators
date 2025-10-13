@@ -393,16 +393,16 @@ else:
             "original": "20 gr/h", "nominal": "6.63 gr/h", "pdf": "TDS SP21 TTO Biocida.pdf",
             "imagen": "https://i.imgur.com/jVRU4mY.jpg"},        
             {"min": 3.95, "max": 6.65, "modelo": "SP-5 Oxi 20", "gas": "Oxígeno @90-94%", "caudal": "1.5 L/min",
-            "original": "—", "nominal": "6.63 gr/h", "pdf": "TDS SP-5 Oxi ES TTO Biocida.pdf",
+            "original": "—", "nominal": "6.63 gr/h", "pdf": "TDS SP-5 Oxi ES TTO Biocida (20).pdf",
             "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
     
             # 7 < Pr <= 12
             {"min": 6.65, "max": 8.5, "modelo": "SP-5 Oxi 30", "gas": "Oxígeno @90-94%", "caudal": "1.5 L/min",
-            "original": "30 gr/h", "nominal": "8.49 gr/h", "pdf": "TDS SP-5 Oxi ES TTO Biocida",
+            "original": "30 gr/h", "nominal": "8.49 gr/h", "pdf": "TDS SP-5 Oxi ES TTO Biocida (30)",
             "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
             {"min": 6.65, "max": 8.5, "modelo": "SP-21 40", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
             "original": "40 gr/h", "nominal": "8.49 gr/h", "pdf": "Ficha Técnica SP21.pdf",
-            "imagen": "https://i.imgur.com/jVRU4mY.jpg"},
+            "imagen": "https://i.imgur.com/jVRU4mY.jpg"},       
 
             # 12 < Pr <= 20
 
