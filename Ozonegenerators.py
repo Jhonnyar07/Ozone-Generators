@@ -599,6 +599,17 @@ else:
         Qg = SelectedQg
         Pr = SelectedPr
 
+        if st.session_state.asp:
+            if optiona != 'Calculo sin generador asignado':
+                st.divider()
+                col19,col20= st.columns(2)
+                with col19:
+                    if optiona != None and optiona != 'Calculo sin generador asignado':
+                        Qg = st.number_input("Caudal de salida del gas (L/min)", value=SelectedQg)
+                with col20:
+                    if optiona != None and optiona != 'Calculo sin generador asignado':
+                        Pr = st.number_input("Producción seleccionada (g/h)", value=SelectedPr)
+
         if optiona != None:
             Vei = st.number_input("Volumen del espacio a tratar", value=None)
             option_map ={
@@ -626,16 +637,7 @@ else:
                 else:
                     Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
 
-        if st.session_state.asp:
-            if optiona != 'Calculo sin generador asignado' and Vei != None:
-                st.divider()
-                col19,col20= st.columns(2)
-                with col19:
-                    if optiona != 'Calculo sin generador asignado':
-                        Qg = st.number_input("Caudal de salida del gas (L/min)", value=SelectedQg)
-                with col20:
-                    if optiona != 'Calculo sin generador asignado':
-                        Pr = st.number_input("Producción seleccionada (g/h)", value=SelectedPr)
+
 
         col1,col2,col3 = st.columns(3)
         with col1:
