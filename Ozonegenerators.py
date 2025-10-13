@@ -27,6 +27,7 @@ USUARIOS = {
 if "logueado" not in st.session_state:
     st.session_state.logueado = False
     st.session_state.franchise = False
+    st.session_state.asp = False
 
 if not st.session_state.logueado:
     st.markdown("<h2 style='text-align: center;'>Control de Acceso</h2>", unsafe_allow_html=True)
