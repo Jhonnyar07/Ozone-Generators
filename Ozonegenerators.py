@@ -35,7 +35,7 @@ if not st.session_state.logueado:
     password = st.text_input("Contraseña", type="password")
     if username == 'franquicia' and password == 'fr4nquicia':
         st.session_state.franchise = True
-    if username == 'asp' and password == 'asepsia':
+    if username in ['asp', 'Asp'] and password in ['asepsia']:
         st.session_state.asp = True
     if username and password:
         if username in USUARIOS and password == USUARIOS[username]:
