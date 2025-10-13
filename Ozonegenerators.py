@@ -605,10 +605,12 @@ else:
                 col19,col20= st.columns(2)
                 with col19:
                     if optiona != None and optiona != 'Calculo sin generador asignado':
-                        Qg = st.number_input("Caudal de salida del gas (L/min)", value=SelectedQg)
+                        Qg = SelectedQg
+                        st.markdown("Caudal de salida del gas (L/min): " + Qg)
                 with col20:
                     if optiona != None and optiona != 'Calculo sin generador asignado':
-                        Pr = st.number_input("Producción seleccionada (g/h)", value=SelectedPr)
+                        Pr = SelectedPr
+                        st.markdown("Producción seleccionada (g/h): " + Pr)
 
         if optiona != None:
             Vei = st.number_input("Volumen del espacio a tratar", value=None)
