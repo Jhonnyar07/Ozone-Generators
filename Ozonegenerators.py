@@ -398,7 +398,7 @@ else:
     
             # 7 < Pr <= 12
             {"min": 6.65, "max": 8.5, "modelo": "SP-5 Oxi 30", "gas": "Oxígeno @90-94%", "caudal": "1.5 L/min",
-            "original": "30 gr/h", "nominal": "8.49 gr/h", "pdf": "TDS SP-5 Oxi ES TTO Biocida (30)",
+            "original": "30 gr/h", "nominal": "8.49 gr/h", "pdf": "TDS SP-5 Oxi ES TTO Biocida (30).pdf",
             "imagen": "https://i.imgur.com/j4Ujngv.jpg"},
             {"min": 6.65, "max": 8.5, "modelo": "SP-21 40", "gas": "Oxígeno @90-94%", "caudal": "10 L/min",
             "original": "40 gr/h", "nominal": "8.49 gr/h", "pdf": "Ficha Técnica SP21.pdf",
