@@ -271,16 +271,16 @@ else:
                 st.error("❌ Seleccione el tipo de instalación.")
                 st.stop()      
             if Vr is None:
-                st.error("❌ Debes introducir un volumen antes de calcular.")
+                st.error("❌ Introducir un volumen antes de calcular.")
                 st.stop()
             if Qr is None:
-                st.error("❌ Debes introducir un Caudal de Recirculación antes de calcular.")
+                st.error("❌ Introducir un Caudal de Recirculación antes de calcular.")
                 st.stop()
             if Qc is None:
-                st.error("❌ Debes introducir un Caudal de Consumo antes de calcular.")
+                st.error("❌ Introducir un Caudal de Consumo antes de calcular.")
                 st.stop()
             if C is None:
-                st.error("❌ Debes introducir una concentración objetivo antes de calcular.")
+                st.error("❌ Introducir una concentración objetivo antes de calcular.")
                 st.stop()     
         if optionw == 'Agua Potable' and calcule == True:
             st.divider()
@@ -661,17 +661,20 @@ else:
         calcule = st.button("Calcular",use_container_width=True)
 
         if calcule == True:
+            if optiona is None:
+                st.error("❌ Seleccionar Generador para proceder con el calculo.")
+                st.stop()
             if airUnitSelection is None:
-                st.error("❌ Debes seleccionar la unidad de Volumen antes de calcular.")
+                st.error("❌ Seleccionar la unidad de Volumen antes de calcular.")
                 st.stop()
             if Vei is None:
-                st.error("❌ Debes introducir un Volumen antes de calcular.")
+                st.error("❌ Introducir un Volumen antes de calcular.")
                 st.stop()
             if Qg is None:
-                st.error("❌ Debes introducir un Valor de caudal antes de calcular.")
+                st.error("❌ Introducir un Valor de caudal antes de calcular.")
                 st.stop()
             if Pr is None:
-                st.error("❌ Debes introducir un Valor de producción antes de calcular.")
+                st.error("❌ Introducir un Valor de producción antes de calcular.")
                 st.stop()
             st.markdown("<h3 style='text-align: center;'>Resultados</h3>", unsafe_allow_html=True)
             #Variables of air ozone
