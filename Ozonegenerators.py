@@ -623,7 +623,7 @@ else:
                 else:
                     Pr = st.number_input("Producción seleccionada (g/h)", value= SelectedPr)
 
-        if st.session_state.franchise:
+        if st.session_state.franchise == False:
             if optiona != 'Calculo sin generador asignado' and Vei != None:
                 st.divider()
                 col19,col20= st.columns(2)
